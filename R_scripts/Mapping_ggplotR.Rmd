@@ -1,0 +1,46 @@
+---
+title: "GGplotR mapping workshop"
+author: "Hannah Wilson"
+date: "15/07/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+install.packages('ggmap')
+install.packages('tidyverse')
+install.packages('ggrepel')
+install.packages('leaflet')
+install.packages('sf')
+install.packages('raster')
+install.packages('rgdal')
+library(ggmap)
+library(tidyverse)
+library(ggrepel)
+library(leaflet)
+library(sf)
+library(raster)
+library(rgdal)
+?get_stamenmap
+```
+	
+terrain, terrain-background, terrain-labels, terrain-lines, toner, toner-2010, toner-2011, toner-background, toner-hybrid, toner-labels, toner-lines, toner-lite, or watercolor.
+
+
+
+```{r}
+m1 <- get_stamenmap(bbox = c(left =112, bottom = -44, right = 157, top = -10), zoom = 4, maptype = 'terrain') 
+ggmap(m1)+
+    geom_point(data = sites, aes(x=Longitude, y=Latitude, fill = ToxA),colour="black",pch=21, size=3, show.legend = FALSE)
+summary(sites)
+```
+
+```{r}
+
+sites <- read.csv("WAI_isolate_map2.csv", head = TRUE, sep = ',')
+```
+
