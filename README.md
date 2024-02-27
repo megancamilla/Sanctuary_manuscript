@@ -1,5 +1,5 @@
 # Sanctuary_manuscript
-Collection of code used
+Collection of data for:
 Sanctuary: A Starship transposon facilitating the movement of the virulence factor ToxA in fungal wheat pathogens
 
 Angus Bucknell1,2*, Hannah M. Wilson3*, Karen C. Gonçalves do Santos4, Steven Simpfendorfer5, Andrew Milgate6, Hugo Germain4, Peter S. Solomon3, Adam Bentham2, Megan C. McDonald1,3
