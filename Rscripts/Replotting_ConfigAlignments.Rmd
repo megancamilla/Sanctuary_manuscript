@@ -1,0 +1,444 @@
+---
+title: "Sanctuary Alignments with Lastz and Minimap2"
+output: html_notebook
+---
+# Code to align and plot Sanctuary and Mini-sanctuaries from <i>B. sorokiniana</i>
+
+```{bash, engine.opts='-l'}
+
+conda activate GenomeAlign
+
+cd /Users/mcdonamc/OneDrive\ -\ University\ of\ Birmingham/Manuscripts/Sanctuary/Sanctuary_Ralignments
+
+# Path to your FASTA file
+fasta_file="SANC-FINAL-ANNOTATION.fasta"
+
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+#lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=All_Sanc_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+
+```
+
+
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+#minimap2 -X -N 5 -p 0.5 -c SANC-FINAL-ANNOTATION.fasta SANC-FINAL-ANNOTATION.fasta > AllvsAllSanc.paf
+```
+
+## Switching to R for plotting lastz and minimaps results with gggenomes
+
+```{r}
+library(gggenomes)
+library(ggplot2)
+library(tidyverse)
+library(ggnewscale)
+
+setwd("/Users/mcdonamc/Library/CloudStorage/OneDrive-UniversityofBirmingham/Manuscripts/Sanctuary/Sanctuary_Ralignments")
+```
+
+
+```{r}
+# Load LASTZ output; assuming it's a tab-delimited file with appropriate headers
+lastz_output <-read.delim("All_Sanc_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(lastz_output) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+lastz_output <-filter(lastz_output, length1>=3000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+# Assuming you want to visualize links between name1 and name2
+lzlinks <- lastz_output %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+```
+
+
+```{r}
+# Read in minimap2 links from .paf file
+Minimap2_links <- read_paf("AllvsAllSanc.paf")
+
+Minimap2_links <-Minimap2_links %>% filter(map_length>=3200)
+
+```
+
+```{r}
+
+filelist<-list.files(pattern = "\\.gff")
+gfflist <-lapply(filelist, function(file) {
+  read.delim(file, comment.char = "#", header = FALSE)})
+
+comb_gff<-do.call(rbind, gfflist)
+colnames(comb_gff) <- c("chr","source","type","start","end","dot","strand","dot2","Feature") 
+
+genes<- comb_gff %>%
+  transmute(
+    seq_id=chr,
+    start= start,
+    end = end,
+    strand= strand,
+    feat_id = type)%>%
+  filter(feat_id=="YR" | feat_id=="HET"| feat_id=="ClassII"| feat_id=="ToxhAT"| feat_id=="NLR" | feat_id=="Patatin-PLP"| feat_id=="TPR-repeat" | feat_id=="ClassI")
+
+unique(genes$feat_id)
+
+```
+
+```{r}
+# Read the FASTA file into a seq object
+Sanc_seq <- read_seqs("SANC-FINAL-ANNOTATION.fasta")
+```
+
+Generate plot with LastZ links only
+```{r}
+Lastz_plot1<- gggenomes(seqs = Sanc_seq, links= lzlinks, genes = genes) + 
+  geom_seq()  + geom_bin_label(expand_left = .5) + 
+  geom_link(aes(fill=strand), color=NA, alpha=0.4) + new_scale_fill() +
+  geom_gene(aes(fill=feat_id), color=NA, size = 3) +
+  scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red"))
+
+Lastz_plot2<-gggenomes(seqs = Sanc_seq, links =lzlinks, genes = genes) + geom_seq()  + 
+  geom_bin_label(expand_left = .5) +
+  geom_link(aes(fill=perc_id), color=NA, alpha=0.2, size=1) + scale_fill_distiller(palette = "Spectral") +
+  new_scale_fill()+ geom_gene(aes(fill=feat_id), color=NA, size = 3)+scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red"))
+
+print(Lastz_plot1)
+print(Lastz_plot2)
+
+ggsave("Lastz_align_strandcolor.pdf", Lastz_plot1, width = 15, height = 12, units = "cm")
+ggsave("Lastz_align_percIDcolor.pdf", Lastz_plot2, width = 15, height = 15, units = "cm")
+
+
+```
+
+```{r}
+
+Minimap_plots<- gggenomes(seqs=Sanc_seq, links=Minimap2_links, genes = genes) + geom_seq()  + 
+  geom_bin_label(expand_left = .5) + geom_link(aes(fill= strand), color=NA)  + 
+  new_scale_fill() + geom_gene(aes(fill=feat_id), color=NA, size = 3)+scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red"))
+  
+
+print(Minimap_plots)
+
+ggsave("Minimap_align.pdf", Minimap_plots, width = 15, height = 12, units = "cm")
+
+
+```
+
+
+Run again but with one representative from each Config.
+
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+minimap2 -X -N 5 -p 0.5 -c SANC-FINAL-Config123.fasta SANC-FINAL-Config123.fasta > ThreevsThreeSanc.paf
+
+fasta_file="SANC-FINAL-Config123.fasta"
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=three_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+
+```
+
+```{r}
+# Read in minimap2 links from .paf file
+mmThree_links <- read_paf("ThreevsThreeSanc.paf")
+mmThree_links <- mmThree_links %>% filter(map_length>=2000)
+
+lzThree<-read.delim("three_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(lzThree) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+lzThree <-filter(lzThree, length1>=2000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+# Assuming you want to visualize links between name1 and name2
+threelinks <- lzThree %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+
+# Read the FASTA file into a seq object
+Three_seq <- read_seqs("SANC-FINAL-Config123.fasta")
+
+```
+
+```{r}
+
+Three_plots_strand<- gggenomes(seqs=Three_seq, links=threelinks, genes = genes) + 
+  geom_seq()  + geom_bin_label(expand_left =.4, size=4) + 
+  geom_link(aes(fill= strand), color=NA)  + new_scale_fill() +
+  geom_gene(aes(fill=feat_id), color=NA, size = 3) + 
+  scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red"))
+
+print(Three_plots_strand)
+
+ggsave("Three_align_strand.pdf", Three_plots_strand, width = 15, height = 12, units = "cm")
+
+Three_plots_id <-gggenomes(seqs=Three_seq, links=threelinks, genes = genes) + 
+  geom_seq() + geom_bin_label(expand_left =.4, size=4) + 
+  geom_link(aes(fill= perc_id), color=NA, alpha=0.4) + scale_fill_fermenter(palette = "Spectral") +
+  new_scale_fill() + 
+  geom_gene(aes(fill=feat_id), color=NA, size = 3) + 
+  scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red"))
+
+print(Three_plots_id)
+
+ggsave("Three_align_id.pdf", Three_plots_id, width = 15, height = 12, units = "cm")
+
+```
+
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+minimap2 -X -N 5 -p 0.5 -c Sanc_Big_Mini.fasta Sanc_Big_Mini.fasta > Big_mini.paf
+
+fasta_file="Sanc_Big_Mini.fasta"
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=mini_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+```
+
+```{r}
+lzMini<-read.delim("mini_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(lzMini) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+lzMini <-filter(lzMini, length1>=1000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+# Assuming you want to visualize links between name1 and name2
+minilinks <- lzMini %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+Mini_seqs <- read_seqs("Sanc_Big_Mini.fasta")
+
+Mini_plot_strand<- gggenomes(seqs=Mini_seqs, links=minilinks) + geom_seq()  + geom_bin_label(expand_left =.4, size=4) + geom_link(aes(fill= strand), color=NA, alpha=0.4)  
+
+print(Mini_plot_strand)
+
+ggsave("Mini_align_strand.pdf", Mini_plot_strand, width = 15, height = 12, units = "cm")
+
+Mini_plots_id<- gggenomes(seqs=Mini_seqs, links=minilinks, genes = genes) + 
+  geom_seq() + geom_bin_label(expand_left =.4, size=4) + 
+  geom_link(aes(fill= perc_id), color=NA, alpha=0.4)  + scale_fill_distiller(palette = "Spectral") +
+  new_scale_fill() + 
+  geom_gene(aes(fill=feat_id), color=NA, size = 3) + 
+  scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow",  "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red"))
+
+print(Mini_plots_id)
+
+ggsave("Mini_align_id.pdf", Mini_plots_id, width = 15, height = 7.5, units = "cm")
+
+```
+
+
+```{r}
+
+mmMini_links <- read_paf("Big_mini.paf")
+mmMini_links <- Mini_links %>% filter(map_length>=3000)
+Mini_plots<- gggenomes(seqs=Mini_seqs, links=mmMini_links) + geom_seq()  + geom_bin_label(expand_left =.4, size=4) + geom_link(aes(fill= strand), color=NA)  
+print(Mini_plots)
+ggsave("Mini_align.pdf", Mini_plots, width = 15, height = 12, units = "cm")
+
+```
+
+
+
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+minimap2 -X -N 5 -p 0.5 -c Horizon_Ptr_Pnod.fasta Horizon_Ptr_Pnod.fasta > Horizon_Ptr_Pnod.paf
+
+fasta_file="Horizon_Ptr_Pnod.fasta"
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=Horizon_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+
+
+```
+```{r}
+lzHorizon<-read.delim("Horizon_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(lzHorizon) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+lzHorizon <-filter(lzHorizon, length1>=1000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+# Assuming you want to visualize links between name1 and name2
+Horizon_links <- lzHorizon %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+Horizon_seqs <- read_seqs("Horizon_Ptr_Pnod.fasta")
+
+Horizon_plot_strand<- gggenomes(seqs=Horizon_seqs, links=Horizon_links) + geom_seq()  + geom_bin_label(expand_left =.4, size=4) + geom_link(aes(fill= strand), color=NA, alpha=0.4)  
+
+print(Horizon_plot_strand)
+
+ggsave("Horizon_align_strand.pdf", Horizon_plot_strand, width = 15, height = 12, units = "cm")
+
+Horizon_plots_id<- gggenomes(seqs=Horizon_seqs, links=Horizon_links) + 
+  geom_seq() + geom_bin_label(expand_left =.4, size=4) + 
+  geom_link(aes(fill= perc_id), color=NA, alpha=0.4)  + scale_fill_distiller(palette = "Spectral")
+
+print(Horizon_plots_id)
+
+ggsave("Horizon_align_id.pdf", Horizon_plots_id, width = 15, height = 12, units = "cm")
+
+```
+
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+#minimap2 -X -N 5 -p 0.5 -c Short_Horizon_Ptr_Pnod.fasta Short_Horizon_Ptr_Pnod.fasta > Short_Horizon_Ptr_Pnod.paf
+
+fasta_file="Short_Horizon_Ptr_Pnod.fasta"
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=Short_Horizon_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+
+```
+
+```{r}
+Short_Horizon<-read.delim("Short_Horizon_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(Short_Horizon) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+Short_Horizon <-filter(Short_Horizon, length1>=1000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+# Assuming you want to visualize links between name1 and name2
+Short_Horizon_links <- Short_Horizon %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+Short_Horizon_seqs <- read_seqs("Short_Horizon_Ptr_Pnod.fasta")
+
+Short_Horizon_plot_strand<- gggenomes(seqs=Short_Horizon_seqs, links=Short_Horizon_links) + geom_seq()  + geom_bin_label(expand_left =.4, size=4) + geom_link(aes(fill= strand), color=NA, alpha=0.4)  
+
+print(Short_Horizon_plot_strand)
+
+ggsave("Short_Horizon_align_strand.pdf", Short_Horizon_plot_strand, width = 15, height = 12, units = "cm")
+
+Short_Horizon_plots_id<- gggenomes(seqs=Short_Horizon_seqs, links=Short_Horizon_links) + 
+  geom_seq() + geom_bin_label(expand_left =.4, size=4) + 
+  geom_link(aes(fill= perc_id), color=NA, alpha=0.4)  + scale_fill_distiller(palette = "Spectral")
+
+print(Short_Horizon_plots_id)
+
+ggsave("Short_Horizon_align_id.pdf", Short_Horizon_plots_id, width = 15, height = 12, units = "cm")
+```
+
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+
+fasta_file="Short_Horizon_Sanc_Ptr_Pnod.fasta"
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=Horizon_Sanc_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+
+```
+
+
+```{r}
+Sanc_Horizon<-read.delim("Horizon_Sanc_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(Sanc_Horizon) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+Sanc_Horizon <-filter(Sanc_Horizon, length1>=1000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+# Assuming you want to visualize links between name1 and name2
+Sanc_Horizon_links <- Sanc_Horizon %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+Sanc_Horizon_seqs <- read_seqs("Short_Horizon_Sanc_Ptr_Pnod.fasta")
+
+Sanc_Horizon_plot_strand<- gggenomes(seqs=Sanc_Horizon_seqs, links=Sanc_Horizon_links) + geom_seq()  + geom_bin_label(expand_left =.4, size=4) + geom_link(aes(fill= strand), color=NA, alpha=0.4)  
+
+print(Sanc_Horizon_plot_strand)
+
+ggsave("Sanc_Horizon_align_strand.pdf", Short_Horizon_plot_strand, width = 15, height = 12, units = "cm")
+
+Sanc_Horizon_plots_id<- gggenomes(seqs=Sanc_Horizon_seqs, links=Sanc_Horizon_links, genes = genes) + 
+  geom_seq() + geom_bin_label(expand_left =.4, size=4) + 
+  geom_link(aes(fill= perc_id), color=NA, alpha=0.4)  + scale_fill_distiller(palette = "Spectral")+
+  new_scale_fill() + 
+  geom_gene(aes(fill=feat_id), color=NA, size = 3) + 
+  scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow",  "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red"))
+
+print(Sanc_Horizon_plots_id)
+
+ggsave("Sanc_Horizon_align_id.pdf", Sanc_Horizon_plots_id, width = 15, height = 5, units = "cm")
+```
