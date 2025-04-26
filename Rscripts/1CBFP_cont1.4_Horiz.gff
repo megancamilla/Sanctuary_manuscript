@@ -1,0 +1,418 @@
+##gff-version 3
+##source-version geneious 2023.1.1
+##sequence-region	1CBFP_cont1.4_Horiz	1	148759
+1CBFP_cont1.4_Horiz	ENA	CDS	17	1054	.	+	0	ID=CDS:EDU47822;
+1CBFP_cont1.4_Horiz	ENA	gene	17	1054	.	+	.	ID=gene:PTRG_04915
+1CBFP_cont1.4_Horiz	ENA	exon	17	1054	.	+	.	Name=EDU47822-1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	1275	2180	0.68	+	0	ID=gene_04643.t1.c1
+1CBFP_cont1.4_Horiz	Geneious	SDR	2824	2833	.	+	.	
+1CBFP_cont1.4_Horiz	Geneious	YR	3332	5613	.	+	.	Name=Captain
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	3572	3634	0.75	+	.	Name=SM - 1;ID=gene_09853.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	3685	4154	0.75	+	.	Name=SM - 1;ID=gene_09853.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	4203	4567	0.75	+	.	Name=SM - 1;ID=gene_09853.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	4626	5614	0.75	+	.	Name=SM - 1;ID=gene_09853.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	3572	3634	0.75	+	0	ID=gene_09853.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	3685	4154	0.96	+	0	ID=gene_09853.t1.c2
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	4203	4567	1.0	+	1	ID=gene_09853.t1.c3
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	4626	5614	0.96	+	2	ID=gene_09853.t1.c4
+1CBFP_cont1.4_Horiz	ENA	CDS	9350	9768	.	-	0	ID=CDS:EDU47821;
+1CBFP_cont1.4_Horiz	ENA	CDS	7842	9292	.	-	0	ID=CDS:EDU47821;
+1CBFP_cont1.4_Horiz	ENA	CDS	6853	7508	.	-	0	ID=CDS:EDU47821;
+1CBFP_cont1.4_Horiz	ENA	CDS	6312	6329	.	-	0	ID=CDS:EDU47821;
+1CBFP_cont1.4_Horiz	ENA	gene	6312	9768	.	-	.	ID=gene:PTRG_04914
+1CBFP_cont1.4_Horiz	ENA	exon	6312	6329	.	-	.	Name=EDU47821-4
+1CBFP_cont1.4_Horiz	ENA	exon	6853	7508	.	-	.	Name=EDU47821-3
+1CBFP_cont1.4_Horiz	ENA	exon	7842	9292	.	-	.	Name=EDU47821-2
+1CBFP_cont1.4_Horiz	ENA	exon	9350	9768	.	-	.	Name=EDU47821-1
+1CBFP_cont1.4_Horiz	maker	CDS	10604	10665	.	+	0	ID=gene_09855.t1.c3
+1CBFP_cont1.4_Horiz	maker	CDS	10685	10742	.	+	1	ID=gene_09855.t1.c4
+1CBFP_cont1.4_Horiz	maker	CDS	10856	10932	.	+	0	ID=gene_09855.t1.c5
+1CBFP_cont1.4_Horiz	maker	CDS	10959	11010	.	+	1	ID=gene_09855.t1.c6
+1CBFP_cont1.4_Horiz	maker	CDS	11143	11445	.	+	0	ID=gene_09855.t1.c7
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	11807	11818	1.0	+	0	ID=gene_07217.t1.c3
+1CBFP_cont1.4_Horiz	ENA	CDS	11920	12020	.	+	0	ID=CDS:EDU47820;
+1CBFP_cont1.4_Horiz	ENA	CDS	12089	12311	.	+	0	ID=CDS:EDU47820;
+1CBFP_cont1.4_Horiz	ENA	gene	11920	12311	.	+	.	ID=gene:PTRG_04913
+1CBFP_cont1.4_Horiz	ENA	exon	11920	12020	.	+	.	Name=EDU47820-1
+1CBFP_cont1.4_Horiz	ENA	exon	12089	12311	.	+	.	Name=EDU47820-2
+1CBFP_cont1.4_Horiz	ENA	CDS	16963	17250	.	-	0	ID=CDS:EDU47819;
+1CBFP_cont1.4_Horiz	ENA	CDS	16491	16512	.	-	0	ID=CDS:EDU47819;
+1CBFP_cont1.4_Horiz	ENA	CDS	15728	15909	.	-	0	ID=CDS:EDU47819;
+1CBFP_cont1.4_Horiz	ENA	gene	15728	17250	.	-	.	ID=gene:PTRG_04912
+1CBFP_cont1.4_Horiz	ENA	exon	15728	15909	.	-	.	Name=EDU47819-3
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	15784	15793	0.86	+	0	ID=gene_07136.t1.c2
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	16963	16993	0.45	-	2	Name=SM - 5;ID=gene_09857.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	16816	16909	0.45	-	2	Name=SM - 5;ID=gene_09857.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	16491	16764	0.45	-	2	Name=SM - 5;ID=gene_09857.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	16289	16447	0.45	-	2	Name=SM - 5;ID=gene_09857.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	16289	16447	0.51	-	0	ID=gene_09857.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	16491	16764	0.45	-	1	ID=gene_09857.t1.c2
+1CBFP_cont1.4_Horiz	ENA	exon	16491	16512	.	-	.	Name=EDU47819-2
+1CBFP_cont1.4_Horiz	Geneious	CDS	16963	17250	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	Geneious	CDS	16805	16909	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	ENA	exon	16963	17250	.	-	.	Name=EDU47819-1
+1CBFP_cont1.4_Horiz	maker	CDS	17331	17343	.	+	0	ID=gene_08956.t1.c1
+1CBFP_cont1.4_Horiz	Geneious	ClassI	17480	22341	.	-	.	ID=CLassItransposon
+1CBFP_cont1.4_Horiz	ENA	CDS	22537	22549	.	+	0	ID=CDS:EDU47818;
+1CBFP_cont1.4_Horiz	ENA	CDS	22709	22749	.	+	0	ID=CDS:EDU47818;
+1CBFP_cont1.4_Horiz	ENA	CDS	22989	23096	.	+	0	ID=CDS:EDU47818;
+1CBFP_cont1.4_Horiz	ENA	gene	22537	23096	.	+	.	ID=gene:PTRG_04911
+1CBFP_cont1.4_Horiz	ENA	exon	22537	22549	.	+	.	Name=EDU47818-1
+1CBFP_cont1.4_Horiz	ENA	exon	22709	22749	.	+	.	Name=EDU47818-2
+1CBFP_cont1.4_Horiz	ENA	exon	22989	23096	.	+	.	Name=EDU47818-3
+1CBFP_cont1.4_Horiz	ENA	CDS	23449	23496	.	+	0	ID=CDS:EDU47817;
+1CBFP_cont1.4_Horiz	ENA	CDS	23546	23741	.	+	0	ID=CDS:EDU47817;
+1CBFP_cont1.4_Horiz	ENA	CDS	23795	24028	.	+	0	ID=CDS:EDU47817;
+1CBFP_cont1.4_Horiz	ENA	CDS	24086	24105	.	+	0	ID=CDS:EDU47817;
+1CBFP_cont1.4_Horiz	ENA	gene	23449	24105	.	+	.	ID=gene:PTRG_04910
+1CBFP_cont1.4_Horiz	ENA	exon	23449	23496	.	+	.	Name=EDU47817-1
+1CBFP_cont1.4_Horiz	ENA	exon	23546	23741	.	+	.	Name=EDU47817-2
+1CBFP_cont1.4_Horiz	ENA	exon	23795	24028	.	+	.	Name=EDU47817-3
+1CBFP_cont1.4_Horiz	ENA	exon	24086	24105	.	+	.	Name=EDU47817-4
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	24616	24626	0.75	+	0	ID=gene_07723.t1.c2
+1CBFP_cont1.4_Horiz	ENA	gene	24896	25717	.	-	.	ID=gene:PTRG_04909
+1CBFP_cont1.4_Horiz	ENA	CDS	25542	25717	.	-	0	ID=CDS:EDU47816;
+1CBFP_cont1.4_Horiz	ENA	CDS	24896	25493	.	-	0	ID=CDS:EDU47816;
+1CBFP_cont1.4_Horiz	ENA	gene	24896	25717	.	-	.	ID=gene:PTRG_04909
+1CBFP_cont1.4_Horiz	ENA	exon	24896	25493	.	-	.	Name=EDU47816-2
+1CBFP_cont1.4_Horiz	ENA	exon	25542	25717	.	-	.	Name=EDU47816-1
+1CBFP_cont1.4_Horiz	Geneious	CDS	26030	26209	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	27214	27598	0.57	+	0	Name=SM - 8;ID=gene_09860.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	27671	27997	0.57	+	0	Name=SM - 8;ID=gene_09860.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	28045	28292	0.57	+	0	Name=SM - 8;ID=gene_09860.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	27214	27598	0.57	+	0	ID=gene_09860.t1.c1
+1CBFP_cont1.4_Horiz	ENA	gene	27778	28598	.	-	.	ID=gene:PTRG_04908
+1CBFP_cont1.4_Horiz	ENA	CDS	28582	28598	.	-	0	ID=CDS:EDU47815;
+1CBFP_cont1.4_Horiz	ENA	CDS	28417	28531	.	-	0	ID=CDS:EDU47815;
+1CBFP_cont1.4_Horiz	ENA	CDS	27778	27825	.	-	0	ID=CDS:EDU47815;
+1CBFP_cont1.4_Horiz	ENA	gene	27778	28598	.	-	.	ID=gene:PTRG_04908
+1CBFP_cont1.4_Horiz	ENA	exon	27778	27825	.	-	.	Name=EDU47815-3
+1CBFP_cont1.4_Horiz	maker	CDS	28960	29133	.	-	0	Name=SM - 9;ID=gene_09861.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	28582	28916	.	-	0	Name=SM - 9;ID=gene_09861.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	28399	28531	.	-	0	Name=SM - 9;ID=gene_09861.t1.c1
+1CBFP_cont1.4_Horiz	ENA	exon	28417	28531	.	-	.	Name=EDU47815-2
+1CBFP_cont1.4_Horiz	maker	CDS	28582	28916	.	-	0	ID=gene_09861.t1.c2
+1CBFP_cont1.4_Horiz	ENA	exon	28582	28598	.	-	.	Name=EDU47815-1
+1CBFP_cont1.4_Horiz	maker	CDS	28960	29133	.	-	0	ID=gene_09861.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	29191	29520	.	-	0	ID=gene_09862.t1.c1
+1CBFP_cont1.4_Horiz	Geneious	tsd	29813	29822	.	-	.	Name=TSD_5'
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	30129	30138	0.97	-	0	ID=gene_11748.t1.c3
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	31332	31394	1.0	+	0	Name=SM - 10;ID=gene_09863.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	31441	31842	1.0	+	0	Name=SM - 10;ID=gene_09863.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	31888	32044	1.0	+	0	Name=SM - 10;ID=gene_09863.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	32095	32315	1.0	+	0	Name=SM - 10;ID=gene_09863.t1.c1
+1CBFP_cont1.4_Horiz	ENA	CDS	31332	31394	.	+	0	ID=CDS:EDU47814;
+1CBFP_cont1.4_Horiz	ENA	CDS	31441	31842	.	+	0	ID=CDS:EDU47814;
+1CBFP_cont1.4_Horiz	ENA	CDS	32095	32121	.	+	0	ID=CDS:EDU47814;
+1CBFP_cont1.4_Horiz	ENA	gene	31332	32121	.	+	.	ID=gene:PTRG_04907
+1CBFP_cont1.4_Horiz	ENA	exon	31332	31394	.	+	.	Name=EDU47814-1
+1CBFP_cont1.4_Horiz	ENA	exon	31441	31842	.	+	.	Name=EDU47814-2
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	31888	32044	1.0	+	0	ID=gene_09863.t1.c3
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	32095	32315	1.0	+	2	ID=gene_09863.t1.c4
+1CBFP_cont1.4_Horiz	ENA	exon	32095	32121	.	+	.	Name=EDU47814-3
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	35741	36374	0.63	-	0	Name=SM - 12;ID=gene_09865.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	35449	35686	0.63	-	0	Name=SM - 12;ID=gene_09865.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	34190	35012	0.63	-	0	Name=SM - 12;ID=gene_09865.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	34190	35012	0.7	-	1	ID=gene_09865.t1.c1
+1CBFP_cont1.4_Horiz	ENA	CDS	34925	34947	.	-	0	ID=CDS:EDU47813;
+1CBFP_cont1.4_Horiz	ENA	CDS	34432	34841	.	-	0	ID=CDS:EDU47813;
+1CBFP_cont1.4_Horiz	ENA	CDS	34255	34271	.	-	0	ID=CDS:EDU47813;
+1CBFP_cont1.4_Horiz	ENA	gene	34255	34947	.	-	.	ID=gene:PTRG_04906
+1CBFP_cont1.4_Horiz	ENA	exon	34255	34271	.	-	.	Name=EDU47813-3
+1CBFP_cont1.4_Horiz	ENA	exon	34432	34841	.	-	.	Name=EDU47813-2
+1CBFP_cont1.4_Horiz	ENA	exon	34925	34947	.	-	.	Name=EDU47813-1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	35741	36374	0.95	-	0	ID=gene_09865.t1.c3
+1CBFP_cont1.4_Horiz	ENA	CDS	36748	37182	.	-	0	ID=CDS:EDU47812;
+1CBFP_cont1.4_Horiz	ENA	gene	36748	37182	.	-	.	ID=gene:PTRG_04905
+1CBFP_cont1.4_Horiz	ENA	exon	36748	37182	.	-	.	Name=EDU47812-1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	38052	38282	0.46	-	0	ID=gene_09867.t1.c1
+1CBFP_cont1.4_Horiz	Geneious	CDS	38541	38651	.	+	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	Geneious	CDS	38706	38842	.	+	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	Geneious	CDS	38891	39104	.	+	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	ENA	CDS	40815	41811	.	-	0	ID=CDS:EDU47811;
+1CBFP_cont1.4_Horiz	ENA	CDS	40038	40196	.	-	0	ID=CDS:EDU47811;
+1CBFP_cont1.4_Horiz	ENA	CDS	39461	39492	.	-	0	ID=CDS:EDU47811;
+1CBFP_cont1.4_Horiz	ENA	gene	39461	41811	.	-	.	ID=gene:PTRG_04904
+1CBFP_cont1.4_Horiz	ENA	exon	39461	39492	.	-	.	Name=EDU47811-3
+1CBFP_cont1.4_Horiz	maker	CDS	39493	42597	.	-	0	ID=gene_09868.t1.c1
+1CBFP_cont1.4_Horiz	ENA	exon	40038	40196	.	-	.	Name=EDU47811-2
+1CBFP_cont1.4_Horiz	ENA	exon	40815	41811	.	-	.	Name=EDU47811-1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	43063	43638	0.61	+	0	ID=gene_09869.t1.c1
+1CBFP_cont1.4_Horiz	Geneious	CDS	44545	44652	.	+	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	Geneious	CDS	44701	44782	.	+	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	Geneious	CDS	44844	45220	.	+	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	funannotate	CDS	44545	44652	.	+	0	ID=FUN_010523-T1.cds
+1CBFP_cont1.4_Horiz	funannotate	CDS	44701	44816	.	+	0	ID=FUN_010523-T1.cds
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	44975	44984	0.86	-	0	ID=gene_07136.t1.c2
+1CBFP_cont1.4_Horiz	ENA	CDS	45897	46016	.	+	0	ID=CDS:EDU47810;
+1CBFP_cont1.4_Horiz	ENA	CDS	46091	46660	.	+	0	ID=CDS:EDU47810;
+1CBFP_cont1.4_Horiz	ENA	CDS	46718	47188	.	+	0	ID=CDS:EDU47810;
+1CBFP_cont1.4_Horiz	ENA	CDS	47242	47349	.	+	0	ID=CDS:EDU47810;
+1CBFP_cont1.4_Horiz	ENA	gene	45897	47349	.	+	.	ID=gene:PTRG_04903
+1CBFP_cont1.4_Horiz	ENA	exon	45897	46016	.	+	.	Name=EDU47810-1
+1CBFP_cont1.4_Horiz	ENA	exon	46091	46660	.	+	.	Name=EDU47810-2
+1CBFP_cont1.4_Horiz	ENA	exon	46718	47188	.	+	.	Name=EDU47810-3
+1CBFP_cont1.4_Horiz	ENA	exon	47242	47349	.	+	.	Name=EDU47810-4
+1CBFP_cont1.4_Horiz	ENA	CDS	49178	49576	.	-	0	ID=CDS:EDU47809;
+1CBFP_cont1.4_Horiz	ENA	CDS	48796	48852	.	-	0	ID=CDS:EDU47809;
+1CBFP_cont1.4_Horiz	ENA	gene	48796	49576	.	-	.	ID=gene:PTRG_04902
+1CBFP_cont1.4_Horiz	ENA	exon	48796	48852	.	-	.	Name=EDU47809-2
+1CBFP_cont1.4_Horiz	ENA	exon	49178	49576	.	-	.	Name=EDU47809-1
+1CBFP_cont1.4_Horiz	ENA	gene	50620	51182	.	+	.	ID=gene:PTRG_04901
+1CBFP_cont1.4_Horiz	ENA	CDS	50620	51077	.	+	0	ID=CDS:EDU47808;
+1CBFP_cont1.4_Horiz	ENA	CDS	51146	51182	.	+	0	ID=CDS:EDU47808;
+1CBFP_cont1.4_Horiz	ENA	gene	50620	51182	.	+	.	ID=gene:PTRG_04901
+1CBFP_cont1.4_Horiz	ENA	exon	50620	51077	.	+	.	Name=EDU47808-1
+1CBFP_cont1.4_Horiz	maker	CDS	51146	51292	.	+	0	ID=gene_09871.t1.c2
+1CBFP_cont1.4_Horiz	ENA	exon	51146	51182	.	+	.	Name=EDU47808-2
+1CBFP_cont1.4_Horiz	maker	CDS	51906	52261	.	+	0	Name=SM - 19;ID=gene_09872.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	52875	53232	.	+	0	Name=SM - 19;ID=gene_09872.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	51906	52261	.	+	0	ID=gene_09872.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	52875	53232	.	+	1	ID=gene_09872.t1.c2
+1CBFP_cont1.4_Horiz	ENA	gene	53476	54213	.	+	.	ID=gene:PTRG_04900
+1CBFP_cont1.4_Horiz	ENA	CDS	53476	54213	.	+	0	ID=CDS:EDU47807;
+1CBFP_cont1.4_Horiz	ENA	gene	53476	54213	.	+	.	ID=gene:PTRG_04900
+1CBFP_cont1.4_Horiz	ENA	exon	53476	54213	.	+	.	Name=EDU47807-1
+1CBFP_cont1.4_Horiz	Geneious	CDS	55119	55575	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	Geneious	CDS	54839	55071	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	ENA	gene	54978	57742	.	-	.	ID=gene:PTRG_04899
+1CBFP_cont1.4_Horiz	ENA	CDS	56217	57742	.	-	0	ID=CDS:EDU47806;
+1CBFP_cont1.4_Horiz	ENA	CDS	55119	55603	.	-	0	ID=CDS:EDU47806;
+1CBFP_cont1.4_Horiz	ENA	CDS	54978	55015	.	-	0	ID=CDS:EDU47806;
+1CBFP_cont1.4_Horiz	ENA	gene	54978	57742	.	-	.	ID=gene:PTRG_04899
+1CBFP_cont1.4_Horiz	ENA	exon	54978	55015	.	-	.	Name=EDU47806-3
+1CBFP_cont1.4_Horiz	ENA	exon	55119	55603	.	-	.	Name=EDU47806-2
+1CBFP_cont1.4_Horiz	ENA	exon	56217	57742	.	-	.	Name=EDU47806-1
+1CBFP_cont1.4_Horiz	maker	CDS	59024	59134	.	+	0	Name=SM - 22/ROU - 18;ID=gene_09875.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	59462	59512	.	+	0	Name=SM - 22/ROU - 18;ID=gene_09875.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	59562	60050	.	+	0	Name=SM - 22/ROU - 18;ID=gene_09875.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	60103	60271	.	+	0	Name=SM - 22/ROU - 18;ID=gene_09875.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	60317	60492	.	+	0	Name=SM - 22/ROU - 18;ID=gene_09875.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	59024	59134	.	+	0	ID=gene_09875.t1.c1
+1CBFP_cont1.4_Horiz	ENA	gene	59574	60337	.	+	.	ID=gene:PTRG_04898
+1CBFP_cont1.4_Horiz	ENA	CDS	59574	60050	.	+	0	ID=CDS:EDU47805;
+1CBFP_cont1.4_Horiz	ENA	CDS	60103	60213	.	+	0	ID=CDS:EDU47805;
+1CBFP_cont1.4_Horiz	ENA	CDS	60317	60337	.	+	0	ID=CDS:EDU47805;
+1CBFP_cont1.4_Horiz	ENA	gene	59574	60337	.	+	.	ID=gene:PTRG_04898
+1CBFP_cont1.4_Horiz	ENA	exon	59574	60050	.	+	.	Name=EDU47805-1
+1CBFP_cont1.4_Horiz	maker	CDS	60103	60271	.	+	0	ID=gene_09875.t1.c4
+1CBFP_cont1.4_Horiz	ENA	exon	60103	60213	.	+	.	Name=EDU47805-2
+1CBFP_cont1.4_Horiz	maker	CDS	60317	60492	.	+	2	ID=gene_09875.t1.c5
+1CBFP_cont1.4_Horiz	ENA	exon	60317	60337	.	+	.	Name=EDU47805-3
+1CBFP_cont1.4_Horiz	ENA	gene	60506	60970	.	-	.	ID=gene:PTRG_04897
+1CBFP_cont1.4_Horiz	ENA	CDS	60506	60970	.	-	0	ID=CDS:EDU47804;
+1CBFP_cont1.4_Horiz	ENA	gene	60506	60970	.	-	.	ID=gene:PTRG_04897
+1CBFP_cont1.4_Horiz	ENA	exon	60506	60970	.	-	.	Name=EDU47804-1
+1CBFP_cont1.4_Horiz	maker	CDS	61109	61609	.	+	0	Name=SM - 24;ID=gene_09877.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	61656	61758	.	+	0	Name=SM - 24;ID=gene_09877.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	61805	61980	.	+	0	Name=SM - 24;ID=gene_09877.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	62027	62149	.	+	0	Name=SM - 24;ID=gene_09877.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	61109	61609	.	+	0	ID=gene_09877.t1.c1
+1CBFP_cont1.4_Horiz	ENA	gene	62213	62872	.	-	.	ID=gene:PTRG_04896
+1CBFP_cont1.4_Horiz	ENA	CDS	62213	62872	.	-	0	ID=CDS:EDU47803;
+1CBFP_cont1.4_Horiz	ENA	gene	62213	62872	.	-	.	ID=gene:PTRG_04896
+1CBFP_cont1.4_Horiz	ENA	exon	62213	62872	.	-	.	Name=EDU47803-1
+1CBFP_cont1.4_Horiz	maker	CDS	62974	63018	.	-	0	ID=gene_09878.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	63099	63109	0.84	-	2	ID=gene_11472.t1.c5
+1CBFP_cont1.4_Horiz	ENA	gene	63765	64238	.	+	.	ID=gene:PTRG_04895
+1CBFP_cont1.4_Horiz	ENA	CDS	63765	64238	.	+	0	ID=CDS:EDU47802;
+1CBFP_cont1.4_Horiz	ENA	gene	63765	64238	.	+	.	ID=gene:PTRG_04895
+1CBFP_cont1.4_Horiz	ENA	exon	63765	64238	.	+	.	Name=EDU47802-1
+1CBFP_cont1.4_Horiz	ENA	gene	64523	68019	.	-	.	ID=gene:PTRG_04894
+1CBFP_cont1.4_Horiz	ENA	CDS	67044	68019	.	-	0	ID=CDS:EDU47801;
+1CBFP_cont1.4_Horiz	ENA	CDS	65018	66382	.	-	0	ID=CDS:EDU47801;
+1CBFP_cont1.4_Horiz	ENA	CDS	64523	64725	.	-	0	ID=CDS:EDU47801;
+1CBFP_cont1.4_Horiz	ENA	gene	64523	68019	.	-	.	ID=gene:PTRG_04894
+1CBFP_cont1.4_Horiz	ENA	exon	64523	64725	.	-	.	Name=EDU47801-3
+1CBFP_cont1.4_Horiz	ENA	exon	65018	66382	.	-	.	Name=EDU47801-2
+1CBFP_cont1.4_Horiz	ENA	exon	67044	68019	.	-	.	Name=EDU47801-1
+1CBFP_cont1.4_Horiz	ENA	gene	68572	70085	.	+	.	ID=gene:PTRG_04893
+1CBFP_cont1.4_Horiz	ENA	CDS	68572	68883	.	+	0	ID=CDS:EDU47800;
+1CBFP_cont1.4_Horiz	ENA	CDS	68934	70085	.	+	0	ID=CDS:EDU47800;
+1CBFP_cont1.4_Horiz	ENA	gene	68572	70085	.	+	.	ID=gene:PTRG_04893
+1CBFP_cont1.4_Horiz	ENA	exon	68572	68883	.	+	.	Name=EDU47800-1
+1CBFP_cont1.4_Horiz	ENA	exon	68934	70085	.	+	.	Name=EDU47800-2
+1CBFP_cont1.4_Horiz	gap	biological_region	70130	70229	.	-	.	
+1CBFP_cont1.4_Horiz	ENA	gene	72593	73664	.	-	.	ID=gene:PTRG_04892
+1CBFP_cont1.4_Horiz	ENA	CDS	73157	73664	.	-	0	ID=CDS:EDU47799;
+1CBFP_cont1.4_Horiz	ENA	CDS	72593	73107	.	-	0	ID=CDS:EDU47799;
+1CBFP_cont1.4_Horiz	ENA	gene	72593	73664	.	-	.	ID=gene:PTRG_04892
+1CBFP_cont1.4_Horiz	ENA	exon	72593	73107	.	-	.	Name=EDU47799-2
+1CBFP_cont1.4_Horiz	ENA	exon	73157	73664	.	-	.	Name=EDU47799-1
+1CBFP_cont1.4_Horiz	ENA	gene	74601	76955	.	-	.	ID=gene:PTRG_04891
+1CBFP_cont1.4_Horiz	ENA	CDS	76801	76955	.	-	0	ID=CDS:EDU47798;
+1CBFP_cont1.4_Horiz	ENA	CDS	75189	76756	.	-	0	ID=CDS:EDU47798;
+1CBFP_cont1.4_Horiz	ENA	CDS	74601	75034	.	-	0	ID=CDS:EDU47798;
+1CBFP_cont1.4_Horiz	ENA	gene	74601	76955	.	-	.	ID=gene:PTRG_04891
+1CBFP_cont1.4_Horiz	ENA	exon	74601	75034	.	-	.	Name=EDU47798-3
+1CBFP_cont1.4_Horiz	ENA	exon	75189	76756	.	-	.	Name=EDU47798-2
+1CBFP_cont1.4_Horiz	ENA	exon	76322	76756	.	-	.	Name=EDU47798-2
+1CBFP_cont1.4_Horiz	ENA	gene	76322	76955	.	-	.	ID=gene:PTRG_04891
+1CBFP_cont1.4_Horiz	Geneious	identity_to_nodorum	76476	82867	.	-	.	Name=ToxA_left_flank2
+1CBFP_cont1.4_Horiz	ENA	exon	76801	76955	.	-	.	Name=EDU47798-1
+1CBFP_cont1.4_Horiz	Geneious	tsd	77035	77251	.	+	.	Name=IR_Ptr
+1CBFP_cont1.4_Horiz	maker	CDS	77623	77692	.	+	1	ID=gene_09884.t1.c2
+1CBFP_cont1.4_Horiz	ENA	gene	77645	82447	.	+	.	ID=gene:PTRG_04890
+1CBFP_cont1.4_Horiz	ENA	CDS	77645	77692	.	+	0	ID=CDS:EDU47797;
+1CBFP_cont1.4_Horiz	ENA	CDS	77748	79282	.	+	0	ID=CDS:EDU47797;
+1CBFP_cont1.4_Horiz	ENA	CDS	79640	80427	.	+	0	ID=CDS:EDU47797;
+1CBFP_cont1.4_Horiz	ENA	CDS	80521	80661	.	+	0	ID=CDS:EDU47797;
+1CBFP_cont1.4_Horiz	ENA	CDS	80891	81273	.	+	0	ID=CDS:EDU47797;
+1CBFP_cont1.4_Horiz	ENA	CDS	82112	82447	.	+	0	ID=CDS:EDU47797;
+1CBFP_cont1.4_Horiz	ENA	gene	77645	82447	.	+	.	ID=gene:PTRG_04890
+1CBFP_cont1.4_Horiz	ENA	exon	77645	77692	.	+	.	Name=EDU47797-1
+1CBFP_cont1.4_Horiz	ENA	exon	77748	79282	.	+	.	Name=EDU47797-2
+1CBFP_cont1.4_Horiz	ENA	exon	79640	80427	.	+	.	Name=EDU47797-3
+1CBFP_cont1.4_Horiz	ENA	exon	80521	80661	.	+	.	Name=EDU47797-4
+1CBFP_cont1.4_Horiz	maker	CDS	80891	81479	.	+	2	ID=gene_09884.t1.c6
+1CBFP_cont1.4_Horiz	ENA	exon	80891	81273	.	+	.	Name=EDU47797-5
+1CBFP_cont1.4_Horiz	ENA	exon	82112	82447	.	+	.	Name=EDU47797-6
+1CBFP_cont1.4_Horiz	maker	CDS	82865	84109	.	-	0	ID=gene_09885.t1.c1
+1CBFP_cont1.4_Horiz	Geneious	identity_to_nodorum	82865	85117	.	-	.	Name=ToxA_left_flank
+1CBFP_cont1.4_Horiz	Geneious	ToxhAT	85728	105994	.	+	.	
+1CBFP_cont1.4_Horiz	LASTZ	supercont1.4_ident	85729	85904	.	+	.	ID=LZ_Targets_000010
+1CBFP_cont1.4_Horiz	Geneious	blast hit	85731	85904	.	+	.	Name=BLAST Hit
+1CBFP_cont1.4_Horiz	Geneious	ir	85731	85904	.	+	.	Name=TIR-1.1
+1CBFP_cont1.4_Horiz	Geneious	CDS	86378	86632	.	+	.	Name=EVM7_08.708
+1CBFP_cont1.4_Horiz	Geneious	CDS	86739	86906	.	-	.	Name=EVM7_08.708
+1CBFP_cont1.4_Horiz	Geneious	gene	87112	89196	.	+	.	Name=Transposase
+1CBFP_cont1.4_Horiz	maker	CDS	87131	87140	.	-	2	ID=gene_01040.t1.c4
+1CBFP_cont1.4_Horiz	Geneious	cds	87139	87492	.	+	.	Name=HaT_Transposase
+1CBFP_cont1.4_Horiz	Geneious	cds	87553	88635	.	+	.	Name=HaT_Transposase
+1CBFP_cont1.4_Horiz	Geneious	cds	88714	89102	.	+	.	Name=HaT_Transposase
+1CBFP_cont1.4_Horiz	Geneious	cds	89449	89566	.	+	.	Name=HaT_Transposase
+1CBFP_cont1.4_Horiz	Geneious	hp	87464	87578	.	+	.	Name=HP-3
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	87611	87620	1.0	-	0	ID=gene_09182.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	88993	89002	.	-	0	ID=gene_07502.t1.c5
+1CBFP_cont1.4_Horiz	Geneious	hp	89099	89351	.	+	.	Name=HP-2
+1CBFP_cont1.4_Horiz	ENA	gene	89456	90191	.	-	.	ID=gene:PTRG_04889
+1CBFP_cont1.4_Horiz	ENA	exon	89456	89910	.	-	.	Name=EDU47796-2
+1CBFP_cont1.4_Horiz	ENA	three_prime_UTR	89456	89777	.	-	.	
+1CBFP_cont1.4_Horiz	Geneious	effector	89778	90466	.	-	.	Name=ToxA Region
+1CBFP_cont1.4_Horiz	Geneious	gene	89778	90466	.	-	.	Name=ToxA
+1CBFP_cont1.4_Horiz	ENA	CDS	89961	90172	.	-	0	ID=CDS:EDU47796;
+1CBFP_cont1.4_Horiz	ENA	CDS	89778	89910	.	-	0	ID=CDS:EDU47796;
+1CBFP_cont1.4_Horiz	Geneious	cds	89957	90364	.	-	.	Name=ToxA
+1CBFP_cont1.4_Horiz	Geneious	Effector	89957	90364	.	-	.	Name=ToxA
+1CBFP_cont1.4_Horiz	ENA	exon	89961	90191	.	-	.	Name=EDU47796-1
+1CBFP_cont1.4_Horiz	ENA	five_prime_UTR	90173	90191	.	-	.	
+1CBFP_cont1.4_Horiz	Geneious	ir	91250	91350	.	+	.	Name=IR-1
+1CBFP_cont1.4_Horiz	Geneious	gene	93323	93850	.	+	.	Name=MFS
+1CBFP_cont1.4_Horiz	maker	CDS	93421	93430	.	-	1	ID=gene_06074.t1.c3
+1CBFP_cont1.4_Horiz	Geneious	IR	93775	93875	.	-	.	Name=IR-1
+1CBFP_cont1.4_Horiz	Geneious	CDS	94084	94152	.	+	0	Name=EVM7_08.714;ID=CDS10115
+1CBFP_cont1.4_Horiz	Geneious	CDS	94245	94433	.	+	0	Name=EVM7_08.714;ID=CDS10115
+1CBFP_cont1.4_Horiz	funannotate	CDS	94508	94668	.	+	0	ID=FUN_010537-T1.cds
+1CBFP_cont1.4_Horiz	funannotate	CDS	94724	94960	.	+	0	ID=FUN_010537-T1.cds
+1CBFP_cont1.4_Horiz	funannotate	CDS	95008	95539	.	+	0	ID=FUN_010537-T1.cds
+1CBFP_cont1.4_Horiz	maker	CDS	96050	96086	.	+	1	ID=gene_09888.t1.c6
+1CBFP_cont1.4_Horiz	maker	CDS	96148	96191	.	+	0	ID=gene_09888.t1.c7
+1CBFP_cont1.4_Horiz	maker	CDS	96725	96818	.	+	1	ID=gene_09888.t1.c8
+1CBFP_cont1.4_Horiz	Geneious	ClassII	97019	104047	.	+	.	
+1CBFP_cont1.4_Horiz	Geneious	blast_hit	97341	97943	.	-	.	Name=ODM24136
+1CBFP_cont1.4_Horiz	Geneious	blast_hit	97964	101359	.	-	.	Name=ODM24136
+1CBFP_cont1.4_Horiz	ENA	gene	101557	103713	.	-	.	ID=gene:PTRG_04888
+1CBFP_cont1.4_Horiz	ENA	CDS	101557	103713	.	-	0	ID=CDS:EDU47795;
+1CBFP_cont1.4_Horiz	ENA	gene	101557	103713	.	-	.	ID=gene:PTRG_04888
+1CBFP_cont1.4_Horiz	ENA	exon	101557	103713	.	-	.	Name=EDU47795-1
+1CBFP_cont1.4_Horiz	Geneious	blast_hit	101560	103713	.	-	.	Name=CENP-H-GAG
+1CBFP_cont1.4_Horiz	Geneious	ir	105768	105944	.	-	.	Name=TIR-1.2
+1CBFP_cont1.4_Horiz	Geneious	CDS	108554	108733	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	Geneious	CDS	108289	108453	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	ENA	gene	108454	108733	.	-	.	ID=gene:PTRG_04887
+1CBFP_cont1.4_Horiz	ENA	CDS	108554	108733	.	-	0	ID=CDS:EDU47794;
+1CBFP_cont1.4_Horiz	ENA	CDS	108454	108495	.	-	0	ID=CDS:EDU47794;
+1CBFP_cont1.4_Horiz	ENA	gene	108454	108733	.	-	.	ID=gene:PTRG_04887
+1CBFP_cont1.4_Horiz	ENA	exon	108454	108495	.	-	.	Name=EDU47794-2
+1CBFP_cont1.4_Horiz	maker	CDS	108500	108865	.	+	0	ID=gene_09889.t1.c1
+1CBFP_cont1.4_Horiz	ENA	exon	108554	108733	.	-	.	Name=EDU47794-1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	109093	110142	0.59	+	0	ID=gene_09890.t1.c1
+1CBFP_cont1.4_Horiz	ENA	CDS	109579	110142	.	+	0	ID=CDS:EDU47793;
+1CBFP_cont1.4_Horiz	ENA	gene	109579	110142	.	+	.	ID=gene:PTRG_04886
+1CBFP_cont1.4_Horiz	ENA	exon	109579	110142	.	+	.	Name=EDU47793-1
+1CBFP_cont1.4_Horiz	ENA	CDS	111783	112808	.	+	0	ID=CDS:EDU47792;
+1CBFP_cont1.4_Horiz	ENA	gene	111783	112808	.	+	.	ID=gene:PTRG_04885
+1CBFP_cont1.4_Horiz	ENA	exon	111783	112808	.	+	.	Name=EDU47792-1
+1CBFP_cont1.4_Horiz	Geneious	CDS	112899	113429	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	113385	113476	0.63	-	0	ID=gene_09892.t1.c2
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	113532	113594	0.73	-	0	ID=gene_09892.t1.c3
+1CBFP_cont1.4_Horiz	ENA	CDS	116513	116729	.	+	0	ID=CDS:EDU47791;
+1CBFP_cont1.4_Horiz	ENA	CDS	116932	117104	.	+	0	ID=CDS:EDU47791;
+1CBFP_cont1.4_Horiz	ENA	gene	116513	117104	.	+	.	ID=gene:PTRG_04884
+1CBFP_cont1.4_Horiz	ENA	exon	116513	116729	.	+	.	Name=EDU47791-1
+1CBFP_cont1.4_Horiz	ENA	exon	116932	117104	.	+	.	Name=EDU47791-2
+1CBFP_cont1.4_Horiz	funannotate	CDS	117462	117768	.	+	0	ID=FUN_010530-T1.cds
+1CBFP_cont1.4_Horiz	Geneious	CDS	119591	120180	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	Geneious	CDS	119155	119416	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	Geneious	CDS	120217	120567	.	-	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	maker	CDS	123230	123275	.	+	0	ID=gene_09893.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	123339	123668	.	+	2	ID=gene_09893.t1.c2
+1CBFP_cont1.4_Horiz	Geneious	HET	123530	123668	.	+	.	ID=SM - 33
+1CBFP_cont1.4_Horiz	Geneious	HET	123735	124521	.	+	.	ID=SM - 38
+1CBFP_cont1.4_Horiz	Geneious	HET	124580	125294	.	+	.	ID=SM - 38
+1CBFP_cont1.4_Horiz	maker	CDS	123530	123668	.	+	.	Name=SM - 38;ID=gene_09893.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	123735	124521	.	+	.	Name=SM - 38;ID=gene_09893.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	124580	125294	.	+	.	Name=SM - 38;ID=gene_09893.t1.c1
+1CBFP_cont1.4_Horiz	maker	CDS	123735	124521	.	+	2	ID=gene_09893.t1.c3
+1CBFP_cont1.4_Horiz	ENA	CDS	128651	129344	.	-	0	ID=CDS:EDU47789;
+1CBFP_cont1.4_Horiz	ENA	CDS	128465	128475	.	-	0	ID=CDS:EDU47789;
+1CBFP_cont1.4_Horiz	ENA	gene	128465	129344	.	-	.	ID=gene:PTRG_04882
+1CBFP_cont1.4_Horiz	ENA	exon	128465	128475	.	-	.	Name=EDU47789-2
+1CBFP_cont1.4_Horiz	ENA	exon	128651	129344	.	-	.	Name=EDU47789-1
+1CBFP_cont1.4_Horiz	ENA	CDS	130234	130661	.	-	0	ID=CDS:EDU47788;
+1CBFP_cont1.4_Horiz	ENA	CDS	129679	129697	.	-	0	ID=CDS:EDU47788;
+1CBFP_cont1.4_Horiz	ENA	gene	129679	130661	.	-	.	ID=gene:PTRG_04881
+1CBFP_cont1.4_Horiz	ENA	exon	129679	129697	.	-	.	Name=EDU47788-2
+1CBFP_cont1.4_Horiz	ENA	exon	130234	130661	.	-	.	Name=EDU47788-1
+1CBFP_cont1.4_Horiz	AUGUSTUS	DUF3723	132228	132387	0.8	+	.	ID=gene_09895.t1.e1
+1CBFP_cont1.4_Horiz	AUGUSTUS	DUF3723	132436	132725	0.8	+	.	ID=gene_09895.t1.e1
+1CBFP_cont1.4_Horiz	AUGUSTUS	DUF3723	132772	133749	0.8	+	.	ID=gene_09895.t1.e1
+1CBFP_cont1.4_Horiz	AUGUSTUS	DUF3723	133797	134966	0.8	+	.	ID=gene_09895.t1.e1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	132228	132387	0.45	+	0	ID=gene_09895.t1.c1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	132436	132725	0.8	+	2	ID=gene_09895.t1.c2
+1CBFP_cont1.4_Horiz	ENA	CDS	132775	133749	.	+	0	ID=CDS:EDU47787;
+1CBFP_cont1.4_Horiz	ENA	CDS	133797	134966	.	+	0	ID=CDS:EDU47787;
+1CBFP_cont1.4_Horiz	ENA	gene	132775	134966	.	+	.	ID=gene:PTRG_04880
+1CBFP_cont1.4_Horiz	ENA	exon	132775	133749	.	+	.	Name=EDU47787-1
+1CBFP_cont1.4_Horiz	ENA	exon	133797	134966	.	+	.	Name=EDU47787-2
+1CBFP_cont1.4_Horiz	ENA	CDS	136373	136779	.	-	0	ID=CDS:EDU47786;
+1CBFP_cont1.4_Horiz	ENA	CDS	136276	136312	.	-	0	ID=CDS:EDU47786;
+1CBFP_cont1.4_Horiz	ENA	gene	136276	136779	.	-	.	ID=gene:PTRG_04879
+1CBFP_cont1.4_Horiz	ENA	exon	136276	136312	.	-	.	Name=EDU47786-2
+1CBFP_cont1.4_Horiz	ENA	exon	136373	136779	.	-	.	Name=EDU47786-1
+1CBFP_cont1.4_Horiz	AUGUSTUS	CDS	137694	137703	0.86	+	0	ID=gene_07136.t1.c2
+1CBFP_cont1.4_Horiz	Geneious	CDS	138547	138663	.	+	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	Geneious	CDS	138716	138973	.	+	0	Name=hypothetical protein CDS
+1CBFP_cont1.4_Horiz	maker	CDS	138547	138663	.	+	0	ID=gene_09897.t1.c1
+1CBFP_cont1.4_Horiz	ENA	CDS	139754	139839	.	-	0	ID=CDS:EDU47785;
+1CBFP_cont1.4_Horiz	ENA	CDS	139195	139696	.	-	0	ID=CDS:EDU47785;
+1CBFP_cont1.4_Horiz	ENA	gene	139195	139839	.	-	.	ID=gene:PTRG_04878
+1CBFP_cont1.4_Horiz	ENA	exon	139195	139696	.	-	.	Name=EDU47785-2
+1CBFP_cont1.4_Horiz	ENA	exon	139754	139839	.	-	.	Name=EDU47785-1
+1CBFP_cont1.4_Horiz	ENA	CDS	141820	142176	.	-	0	ID=CDS:EDU47784;
+1CBFP_cont1.4_Horiz	ENA	CDS	141026	141721	.	-	0	ID=CDS:EDU47784;
+1CBFP_cont1.4_Horiz	ENA	CDS	140237	140719	.	-	0	ID=CDS:EDU47784;
+1CBFP_cont1.4_Horiz	ENA	gene	140237	142176	.	-	.	ID=gene:PTRG_04877
+1CBFP_cont1.4_Horiz	ENA	exon	140237	140719	.	-	.	Name=EDU47784-3
+1CBFP_cont1.4_Horiz	ENA	exon	141026	141721	.	-	.	Name=EDU47784-2
+1CBFP_cont1.4_Horiz	ENA	exon	141820	142176	.	-	.	Name=EDU47784-1
+1CBFP_cont1.4_Horiz	maker	CDS	142991	143083	.	-	0	ID=gene_09900.t1.c8
+1CBFP_cont1.4_Horiz	maker	CDS	143133	143345	.	-	0	ID=gene_09900.t1.c7
+1CBFP_cont1.4_Horiz	maker	CDS	143397	143624	.	-	0	ID=gene_09900.t1.c6
+1CBFP_cont1.4_Horiz	maker	CDS	143678	143932	.	-	0	ID=gene_09900.t1.c5
+1CBFP_cont1.4_Horiz	maker	CDS	145118	145492	.	-	0	ID=gene_09900.t1.c4
+1CBFP_cont1.4_Horiz	maker	CDS	145537	145819	.	-	1	ID=gene_09900.t1.c3
+1CBFP_cont1.4_Horiz	maker	CDS	145870	146096	.	-	0	ID=gene_09900.t1.c2
+1CBFP_cont1.4_Horiz	ENA	CDS	148607	148713	.	-	0	ID=CDS:EDU47783;
+1CBFP_cont1.4_Horiz	ENA	CDS	148331	148525	.	-	0	ID=CDS:EDU47783;
+1CBFP_cont1.4_Horiz	ENA	CDS	148044	148171	.	-	0	ID=CDS:EDU47783;
+1CBFP_cont1.4_Horiz	ENA	CDS	147905	147993	.	-	0	ID=CDS:EDU47783;
+1CBFP_cont1.4_Horiz	ENA	CDS	146904	147852	.	-	0	ID=CDS:EDU47783;
+1CBFP_cont1.4_Horiz	ENA	CDS	146662	146684	.	-	0	ID=CDS:EDU47783;
+1CBFP_cont1.4_Horiz	ENA	gene	146662	148713	.	-	.	ID=gene:PTRG_04876
+1CBFP_cont1.4_Horiz	ENA	exon	146662	146684	.	-	.	Name=EDU47783-6
+1CBFP_cont1.4_Horiz	ENA	exon	146904	147852	.	-	.	Name=EDU47783-5
+1CBFP_cont1.4_Horiz	ENA	exon	147905	147993	.	-	.	Name=EDU47783-4
+1CBFP_cont1.4_Horiz	ENA	exon	148044	148171	.	-	.	Name=EDU47783-3
+1CBFP_cont1.4_Horiz	ENA	exon	148331	148525	.	-	.	Name=EDU47783-2
+1CBFP_cont1.4_Horiz	ENA	exon	148607	148713	.	-	.	Name=EDU47783-1

@@ -1,0 +1,407 @@
+---
+title: "Starship Alignments"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+## Code to align and plot Sanctuary and Mini-sanctuaries from <i>B. sorokiniana</i>. Note this code only works when you knit the notebook. If you want to run the chunk individually you need to execute each line in the terminal. 
+### <i>The green play button bizzarely only runs R code in R studio</i>
+
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+
+cd /Users/mcdonamc/GIT/Sanctuary_manuscript/Rscripts
+
+# Path to your FASTA file
+fasta_file="ANNOTATED_SANCTUARY.fasta"
+
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+
+#uncomment line below to run lastz
+#lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=All_Sanc_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+
+```
+
+### Switching to R for plotting lastz results with gggenomes
+
+```{r}
+library(gggenomes)
+library(ggplot2)
+library(tidyverse)
+library(ggnewscale)
+
+setwd("/Users/mcdonamc/GIT/Sanctuary_manuscript/Rscripts")
+```
+
+### Read in links (lastz alignments)
+```{r}
+# Load LASTZ output; assuming it's a tab-delimited file with appropriate headers
+lastz_output <-read.delim("All_Sanc_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(lastz_output) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+lastz_output <-filter(lastz_output, length1>=3000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+# Assuming you want to visualize links between name1 and name2
+lzlinks <- lastz_output %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+```
+
+### Gather all available GFF files and read them in together. This enables having a separate gff for each fasta sequence
+### Note this code is also filtering the GFF file to only plot the genes we are interested in (i.e. Starship accessory, cargo and Captain genes)
+```{r}
+filelist<-list.files(pattern = "\\.gff")
+gfflist <-lapply(filelist, function(file) {
+  read.delim(file, comment.char = "#", header = FALSE)})
+
+comb_gff<-do.call(rbind, gfflist)
+colnames(comb_gff) <- c("chr","source","type","start","end","dot","strand","dot2","Feature") 
+
+genes<- comb_gff %>%
+  transmute(
+    seq_id=chr,
+    start= start,
+    end = end,
+    strand= strand,
+    feat_id = type)%>%
+  filter(feat_id=="YR" | feat_id=="HET"| feat_id=="ClassII"| feat_id=="ToxhAT"| feat_id=="NLR" | feat_id=="Patatin-PLP"| feat_id=="TPR-repeat" | feat_id=="ClassI"| feat_id=="DUF3723")
+
+unique(genes$feat_id)
+
+```
+
+### Create a seq object which is your fasta files for sequences aligned above
+```{r}
+# Read the FASTA file into a seq object
+Sanc_seq <- read_seqs("ANNOTATED_SANCTUARY.fasta")
+```
+
+### Generate plot with LastZ links and genes plotted from GFF files
+#### Trick in the code below is to re-set the scale to be able to plot both the links and genes with different color scales.
+
+```{r}
+Lastz_plot1<- gggenomes(seqs = Sanc_seq, links= lzlinks, genes = genes) + 
+  geom_seq()  + geom_bin_label(expand_left = .4, size=2.5) + 
+  geom_link(aes(fill=strand), color=NA, alpha=0.4) + new_scale_fill() +
+  geom_gene(aes(fill=feat_id), color=NA, size = 3) +
+  scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red", "DUF3723"="pink"))
+
+Lastz_plot2<-gggenomes(seqs = Sanc_seq, links =lzlinks, genes = genes) + geom_seq()  + 
+  geom_bin_label(expand_left = .5) +
+  geom_link(aes(fill=perc_id), color=NA, alpha=0.2, size=1) + scale_fill_distiller(palette = "Spectral") +
+  new_scale_fill()+ geom_gene(aes(fill=feat_id), color=NA, size = 3)+scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red", "DUF3723"="pink"))
+
+print(Lastz_plot1)
+print(Lastz_plot2)
+
+ggsave("Lastz_align_strandcolor.pdf", Lastz_plot1, width = 15, height = 12, units = "cm")
+ggsave("Lastz_align_percIDcolor.pdf", Lastz_plot2, width = 15, height = 15, units = "cm")
+
+
+```
+
+###Run again but with one representative from each Sanctuary Haplotype
+
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+
+fasta_file="THREE_SANCTUARY.fasta"
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+#lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=three_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+
+~/bin/AT_richness.sh ${fasta_file}
+```
+
+
+### Read in lastz alignments (links) for three Sanctuary haplotypes
+```{r}
+
+lzThree<-read.delim("three_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(lzThree) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+lzThree <-filter(lzThree, length1>=2000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+# Assuming you want to visualize links between name1 and name2
+threelinks <- lzThree %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+
+# Read the FASTA file into a seq object
+Three_seq <- read_seqs("THREE_SANCTUARY.fasta")
+
+# Read in the AT-richness file into a feature object
+Three_seq_AT <- read_feats("THREE_SANCTUARY_at_richness.bed",
+                        col_names = c("seq_id", "start", "end", "score"))%>% 
+                        mutate(score =as.numeric(score), feat_id='AT_cont') 
+
+```
+
+### Generate plots for three haplotypes only
+#### New feature in this plot is the AT-richness ribbon shown below each sequence
+```{r}
+Three_plots_id <-gggenomes(seqs=Three_seq, links=threelinks, genes = genes, feats =list(at=Three_seq_AT)) + 
+  geom_seq() + geom_bin_label(expand_left =.3, size=3) + 
+  geom_link(aes(fill= perc_id), color=NA, alpha=0.4) + 
+  scale_fill_fermenter(palette = "Spectral") +
+  new_scale_fill() + 
+  geom_gene(aes(fill=feat_id), color=NA, size = 3) + 
+  scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red", "DUF3723"="pink"))+
+  theme(legend.text = element_text(size = 8),legend.title = element_text(size = 8))+
+  geom_ribbon(aes(x=(x+xend)/2, ymin = y-0.1, ymax=(y-0.1)+((score-0.5)*0.3), group=seq_id), feats(at), fill='black',alpha=0.5)
+  
+
+print(Three_plots_id)
+
+ggsave("Three_align_id.pdf", Three_plots_id, width = 20, height = 12, units = "cm")
+
+```
+## Generate alignments between Three haplotypes and additional smaller Sanctuaries
+
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+fasta_file="Sanc_Big_Mini.fasta"
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+#lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=mini_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+
+~/bin/AT_richness.sh ${fasta_file}
+
+```
+
+```{r}
+lzMini<-read.delim("mini_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(lzMini) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+lzMini <-filter(lzMini, length1>=1000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+# Assuming you want to visualize links between name1 and name2
+minilinks <- lzMini %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+Mini_seqs <- read_seqs("Sanc_Big_Mini.fasta")
+
+Mini_AT<- read_feats("Sanc_Big_Mini_at_richness.bed",
+                        col_names = c("seq_id", "start", "end", "score"))%>% 
+                        mutate(score =as.numeric(score), feat_id='AT_cont') 
+
+```
+
+```{r}
+Mini_plots_id<- gggenomes(seqs=Mini_seqs, links=minilinks, genes = genes, feats = list(at=Mini_AT)) + 
+  geom_seq() + geom_bin_label(expand_left =.4, size=2.5) + 
+  geom_link(aes(fill= perc_id), color=NA, alpha=0.4)  + scale_fill_distiller(palette = "Spectral") +
+  new_scale_fill() + 
+  geom_gene(aes(fill=feat_id), color=NA, size = 3) + 
+  scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red", "DUF3723"="pink"))+ 
+  geom_ribbon(aes(x=(x+xend)/2, ymin = y-0.1, ymax=(y-0.1)+
+                    ((as.numeric(score)-0.5)*0.2), group=seq_id), feats(at), fill='black',alpha=0.5)
+
+
+print(Mini_plots_id)
+
+ggsave("Mini_align_id.pdf", Mini_plots_id, width = 15, height = 7.5, units = "cm")
+```
+
+
+
+## Generate alignments between Horizon carrying isolates in Ptr and Pnod
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+
+fasta_file="Horizon_Pnod_Ptr.fasta"
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+#lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=Short_Horizon_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+
+```
+
+
+### Calculate AT-Richness with bedtools and save for plotting with gggenomes
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+~/bin/AT_richness.sh Horizon_Pnod_Ptr.fasta
+
+```
+
+
+### Read in alignments, genes and AT-richness and generate plots
+```{r}
+Short_Horizon<-read.delim("Short_Horizon_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(Short_Horizon) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+Short_Horizon <-filter(Short_Horizon, length1>=1000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+Short_Horizon_links <- Short_Horizon %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+# read in sequences from fasta file
+Short_Horizon_seqs <- read_seqs("Horizon_Pnod_Ptr.fasta")
+
+# read in AT-richness track from bed file
+at_richness <- read_feats("Horizon_Pnod_Ptr_at_richness.bed",
+                        col_names = c("seq_id", "start", "end", "score"))%>% mutate(score =as.numeric(score),feat_id='AT_cont') 
+
+
+# generate initial gggenomes object with seqs links and features
+Short_Horizon_plots_id<- gggenomes(seqs=Short_Horizon_seqs, links=Short_Horizon_links, genes=genes, feats = list(at=at_richness)) + 
+  geom_seq() + geom_bin_label(expand_left =.4, size=2.5) + # plot seqs
+  geom_link(aes(fill= perc_id), color=NA, alpha=0.4) + # plot lastz alignments
+  scale_fill_fermenter(palette = "Spectral") + # change scale of lastz alignments
+  # plot AT-richness below the seqs, offset is -0.1 from chromosome (ymax)
+  # then for y-min calculate 50% at should be exactly at -0.1 
+  #and anything > 50 % is above this line and anything below 50% is below -0.1. 
+  #the *0.3 is a scaling factor which is applied equally to all data points to make the ribbon visible.
+  # the scaler gets close to the chromosome line 80% AT is== (chromline -.1) + ((.8-.5)*.3) == chromline-0.1 + .09 == chromline-0.01
+  # would need to adjust scaler or baseline of -0.1 if AT contents is >80%
+  new_scale_fill() + 
+  geom_gene(aes(fill=feat_id), color=NA, size = 3) + 
+  scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red", "DUF3723"="pink"))+ 
+  geom_ribbon(aes(x=(x+xend)/2, ymin = y-0.1, ymax=(y-0.1)+
+                    ((as.numeric(score)-0.5)*0.2), group=seq_id), feats(at), fill='black',alpha=0.5)
+
+print(Short_Horizon_plots_id)
+
+ggsave("Short_Horizon_align_id.pdf", Short_Horizon_plots_id, width = 18, height = 12, units = "cm")
+
+```
+
+
+## Generate Alignment for Sanctuary vs Horizon
+
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+
+fasta_file="Horizon_Sanc.fasta"
+# Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
+# which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
+#lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=Horizon_Sanc_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+
+```
+
+
+### Calculate AT-Richness with bedtools and save for plotting with gggenomes
+```{bash, engine.opts='-l'}
+conda activate GenomeAlign
+
+~/bin/AT_richness.sh Horizon_Sanc.fasta
+
+```
+
+### Read in results files and generate plots as above
+
+```{r}
+Horizon_Sanc<-read.delim("Horizon_Sanc_lastz.txt", comment.char = "#", header = FALSE)
+
+
+# Define column names based on your LASTZ output format
+colnames(Horizon_Sanc) <- c("name1","strand1","start1","end1","length1","name2","strand2","start2","end2","length2","cov","identity")
+
+# filter alignments less than 3000bp for clarity
+Horizon_Sanc <-filter(Horizon_Sanc, length1>=1000)%>%
+    mutate(identity = as.numeric(str_replace(identity, "%", "")))
+
+# Convert to a DataFrame compatible with gggenomes
+# Assuming you want to visualize links between name1 and name2
+Horizon_Sanc_links <- Horizon_Sanc %>%
+  transmute(
+    seq_id = name1,
+    start = start1,
+    end = end1,
+    seq_id2 = name2,
+    start2 = start2,
+    end2 = end2,
+    strand = strand2,  
+    perc_id = identity # Including the % identity column
+  ) 
+
+Horizon_Sanc_seqs <- read_seqs("Horizon_Sanc.fasta")
+at_richness <- read_feats("Horizon_Sanc_at_richness.bed",
+                        col_names = c("seq_id", "start", "end", "score"))%>% mutate(score =as.numeric(score),feat_id='AT_cont') 
+
+
+
+Horizon_Sanc_plots_id<- gggenomes(seqs=Horizon_Sanc_seqs, links=Horizon_Sanc_links, genes=genes, feats = list(at=at_richness)) + # initial gggenomes object with seqs links and features
+  geom_seq() + geom_bin_label(expand_left =.4, size=2.5) + # plot seqs
+  geom_link(aes(fill= perc_id), color=NA, alpha=0.4) + # plot lastz alignments
+  scale_fill_fermenter(palette = "Spectral") + # change scale of lastz alignments
+  # plot AT-richness below the seqs, offset is -0.1 from chromosome (ymax)
+  # then for y-min calculate 50% at should be exactly at -0.1 
+  #and anything > 50 % is above this line and anything below 50% is below -0.1. 
+  #the *0.3 is a scaling factor which is applied equally to all data points to make the ribbon visible.
+  # the scaler gets close to the chromosome line 80% AT is== (chromline -.1) + ((.8-.5)*.3) == chromline-0.1 + .09 == chromline-0.01
+  # would need to adjust scaler or baseline of -0.1 if AT contents is >80%
+  new_scale_fill() + 
+  geom_gene(aes(fill=feat_id), color=NA, size = 3) + 
+  scale_fill_manual(values=c("YR"="maroon", "HET"="skyblue", "NLR"="purple", "Patatin-PLP"="yellow", "TPR-repeat"="darkgreen", "ClassII"="blue","ClassI"="orange","ToxhAT"="red", "DUF3723"="pink"))+ 
+  geom_ribbon(aes(x=(x+xend)/2, ymin = y-0.125, ymax=(y-0.125)+
+                    ((as.numeric(score)-0.5)*0.25), group=seq_id), feats(at), fill='black',alpha=0.5)
+
+print(Horizon_Sanc_plots_id)
+
+ggsave("Horizon_Sanc_align_id.pdf", Horizon_Sanc_plots_id, width = 18, height = 12, units = "cm")
+
+```

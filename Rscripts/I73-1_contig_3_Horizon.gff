@@ -1,0 +1,377 @@
+##gff-version 3
+##source-version geneious 2023.1.1
+##sequence-region	I73-1_tig03_Horiz	1	148913
+I73-1_tig03_Horiz	Geneious	Starship	1	148508	.	+	.	Name=Horizon
+I73-1_tig03_Horiz	Geneious	SDR	1	6	.	+	.	
+I73-1_tig03_Horiz	Geneious	SDR	3	12	.	+	.	
+I73-1_tig03_Horiz	AUGUSTUS	YR	751	2793	0.72	+	.	Name=SM - 1;ID=gene_09853
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	751	2793	0.72	+	.	Name=SM - 1;ID=gene_09853.t1;Parent=gene_09853
+I73-1_tig03_Horiz	AUGUSTUS	CDS	751	813	0.75	+	.	Name=SM - 1;ID=gene_09853.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	864	1333	0.75	+	.	Name=SM - 1;ID=gene_09853.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	1382	1746	0.75	+	.	Name=SM - 1;ID=gene_09853.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	1805	2793	0.75	+	.	Name=SM - 1;ID=gene_09853.t1.c1
+I73-1_tig03_Horiz	maker	NLR	6655	7073	.	-	0	Name=SM - 2;ID=gene_09854.t1.c1
+I73-1_tig03_Horiz	maker	NLR	5016	6597	.	-	0	Name=SM - 2;ID=gene_09854.t1.c1
+I73-1_tig03_Horiz	maker	NLR	3702	4964	.	-	0	Name=SM - 2;ID=gene_09854.t1.c1
+I73-1_tig03_Horiz	maker	mRNA	3702	7246	.	-	.	Name=SM - 2;ID=gene_09854.t1
+I73-1_tig03_Horiz	maker	mRNA	7612	8750	.	+	.	Name=SM - 3;ID=gene_09855.t1;Parent=gene_09855
+I73-1_tig03_Horiz	maker	gene	7612	8750	.	+	.	Name=SM - 3;ID=gene_09855
+I73-1_tig03_Horiz	maker	mRNA	9112	9614	.	+	.	Name=SM - 4;ID=gene_09856.t1;Parent=gene_09856
+I73-1_tig03_Horiz	maker	CDS	9112	9326	.	+	0	Name=SM - 4;ID=gene_09856.t1.c1
+I73-1_tig03_Horiz	maker	CDS	9392	9614	.	+	0	Name=SM - 4;ID=gene_09856.t1.c1
+I73-1_tig03_Horiz	maker	gene	9112	9614	.	+	.	Name=SM - 4;ID=gene_09856
+I73-1_tig03_Horiz	AUGUSTUS	exon	14266	14296	0.72	-	.	Name=SM - 5;ID=gene_09857.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	14119	14212	0.72	-	.	Name=SM - 5;ID=gene_09857.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	13794	14067	0.72	-	.	Name=SM - 5;ID=gene_09857.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	13592	13750	0.72	-	.	Name=SM - 5;ID=gene_09857.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	13592	14296	0.16	-	.	Name=SM - 5;ID=gene_09857.t1;Parent=gene_09857
+I73-1_tig03_Horiz	AUGUSTUS	CDS	14266	14296	0.45	-	2	Name=SM - 5;ID=gene_09857.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	14119	14212	0.45	-	2	Name=SM - 5;ID=gene_09857.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	13794	14067	0.45	-	2	Name=SM - 5;ID=gene_09857.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	13592	13750	0.45	-	2	Name=SM - 5;ID=gene_09857.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	13592	14296	0.16	-	.	Name=SM - 5;ID=gene_09857
+I73-1_tig03_Horiz	Geneious	ClassI	14407	17502	.	-	.	
+I73-1_tig03_Horiz	Geneious	SDR	15419	15428	.	+	.	
+I73-1_tig03_Horiz	AUGUSTUS	exon	18440	18487	.	+	.	Name=SM - 6;ID=gene_09858.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	18537	18732	.	+	.	Name=SM - 6;ID=gene_09858.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	18786	19066	.	+	.	Name=SM - 6;ID=gene_09858.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	18440	19066	0.47	+	.	Name=SM - 6;ID=gene_09858.t1;Parent=gene_09858
+I73-1_tig03_Horiz	AUGUSTUS	CDS	18440	18487	0.47	+	0	Name=SM - 6;ID=gene_09858.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	18537	18732	0.47	+	0	Name=SM - 6;ID=gene_09858.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	18786	19066	0.47	+	0	Name=SM - 6;ID=gene_09858.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	18440	19066	0.47	+	.	Name=SM - 6;ID=gene_09858
+I73-1_tig03_Horiz	AUGUSTUS	exon	20533	20708	0.96	-	.	Name=SM - 7;ID=gene_09859.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	19887	20484	0.96	-	.	Name=SM - 7;ID=gene_09859.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	19887	20708	0.94	-	.	Name=SM - 7;ID=gene_09859.t1;Parent=gene_09859
+I73-1_tig03_Horiz	AUGUSTUS	CDS	20533	20708	0.96	-	0	Name=SM - 7;ID=gene_09859.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	19887	20484	0.96	-	0	Name=SM - 7;ID=gene_09859.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	19887	20708	0.94	-	.	Name=SM - 7;ID=gene_09859
+I73-1_tig03_Horiz	AUGUSTUS	exon	22205	22589	.	+	.	Name=SM - 8;ID=gene_09860.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	22662	22988	.	+	.	Name=SM - 8;ID=gene_09860.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	23036	23283	.	+	.	Name=SM - 8;ID=gene_09860.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	22205	23283	0.35	+	.	Name=SM - 8;ID=gene_09860.t1;Parent=gene_09860
+I73-1_tig03_Horiz	AUGUSTUS	CDS	22205	22589	0.57	+	0	Name=SM - 8;ID=gene_09860.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	22662	22988	0.57	+	0	Name=SM - 8;ID=gene_09860.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	23036	23283	0.57	+	0	Name=SM - 8;ID=gene_09860.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	22205	23283	0.35	+	.	Name=SM - 8;ID=gene_09860
+I73-1_tig03_Horiz	maker	exon	23951	24124	.	-	.	Name=SM - 9;ID=gene_09861.t1.e1
+I73-1_tig03_Horiz	maker	exon	23573	23907	.	-	.	Name=SM - 9;ID=gene_09861.t1.e1
+I73-1_tig03_Horiz	maker	exon	23390	23522	.	-	.	Name=SM - 9;ID=gene_09861.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	23390	24124	.	-	.	Name=SM - 9;ID=gene_09861.t1;Parent=gene_09861
+I73-1_tig03_Horiz	maker	CDS	23951	24124	.	-	0	Name=SM - 9;ID=gene_09861.t1.c1
+I73-1_tig03_Horiz	maker	CDS	23573	23907	.	-	0	Name=SM - 9;ID=gene_09861.t1.c1
+I73-1_tig03_Horiz	maker	CDS	23390	23522	.	-	0	Name=SM - 9;ID=gene_09861.t1.c1
+I73-1_tig03_Horiz	maker	gene	23390	24124	.	-	.	Name=SM - 9;ID=gene_09861
+I73-1_tig03_Horiz	maker	exon	24182	24511	.	-	.	Name=SM - 9;ID=gene_09862.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	24182	24511	.	-	.	Name=SM - 9;ID=gene_09862.t1;Parent=gene_09862
+I73-1_tig03_Horiz	maker	CDS	24182	24511	.	-	0	Name=SM - 9;ID=gene_09862.t1.c1
+I73-1_tig03_Horiz	maker	gene	24182	24511	.	-	.	Name=SM - 9;ID=gene_09862
+I73-1_tig03_Horiz	AUGUSTUS	exon	26323	26385	.	+	.	Name=SM - 10;ID=gene_09863.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	26432	26833	.	+	.	Name=SM - 10;ID=gene_09863.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	26879	27035	.	+	.	Name=SM - 10;ID=gene_09863.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	27086	27306	.	+	.	Name=SM - 10;ID=gene_09863.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	26323	27306	1.0	+	.	Name=SM - 10;ID=gene_09863.t1;Parent=gene_09863
+I73-1_tig03_Horiz	AUGUSTUS	CDS	26323	26385	1.0	+	0	Name=SM - 10;ID=gene_09863.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	26432	26833	1.0	+	0	Name=SM - 10;ID=gene_09863.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	26879	27035	1.0	+	0	Name=SM - 10;ID=gene_09863.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	27086	27306	1.0	+	0	Name=SM - 10;ID=gene_09863.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	26323	27306	1.0	+	.	Name=SM - 10;ID=gene_09863
+I73-1_tig03_Horiz	AUGUSTUS	exon	27973	28923	0.68	+	.	Name=SM - 11;ID=gene_09864.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	27973	28923	0.68	+	.	Name=SM - 11;ID=gene_09864.t1;Parent=gene_09864
+I73-1_tig03_Horiz	AUGUSTUS	CDS	27973	28923	0.68	+	0	Name=SM - 11;ID=gene_09864.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	27973	28923	0.68	+	.	Name=SM - 11;ID=gene_09864
+I73-1_tig03_Horiz	AUGUSTUS	exon	30732	31365	0.7	-	.	Name=SM - 12;ID=gene_09865.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	30440	30677	0.7	-	.	Name=SM - 12;ID=gene_09865.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	29181	30003	0.7	-	.	Name=SM - 12;ID=gene_09865.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	29181	31365	0.55	-	.	Name=SM - 12;ID=gene_09865.t1;Parent=gene_09865
+I73-1_tig03_Horiz	AUGUSTUS	CDS	30732	31365	0.63	-	0	Name=SM - 12;ID=gene_09865.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	30440	30677	0.63	-	0	Name=SM - 12;ID=gene_09865.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	29181	30003	0.63	-	0	Name=SM - 12;ID=gene_09865.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	29181	31365	0.55	-	.	Name=SM - 12;ID=gene_09865
+I73-1_tig03_Horiz	AUGUSTUS	exon	31740	32174	.	-	.	Name=SM - 13;ID=gene_09866.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	31740	32174	0.91	-	.	Name=SM - 13;ID=gene_09866.t1;Parent=gene_09866
+I73-1_tig03_Horiz	AUGUSTUS	CDS	31740	32174	0.91	-	0	Name=SM - 13;ID=gene_09866.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	31740	32174	0.91	-	.	Name=SM - 13;ID=gene_09866
+I73-1_tig03_Horiz	AUGUSTUS	exon	33044	33274	0.46	-	.	Name=SM - 14;ID=gene_09867.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	33044	33274	0.46	-	.	Name=SM - 14;ID=gene_09867.t1;Parent=gene_09867
+I73-1_tig03_Horiz	AUGUSTUS	CDS	33044	33274	0.46	-	0	Name=SM - 14;ID=gene_09867.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	33044	33274	0.46	-	.	Name=SM - 14;ID=gene_09867
+I73-1_tig03_Horiz	maker	exon	34485	37589	.	-	.	Name=SM - 15;ID=gene_09868.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	34485	37589	.	-	.	Name=SM - 15;ID=gene_09868.t1;Parent=gene_09868
+I73-1_tig03_Horiz	maker	CDS	34485	37589	.	-	0	Name=SM - 15;ID=gene_09868.t1.c1
+I73-1_tig03_Horiz	maker	gene	34485	37589	.	-	.	Name=SM - 15;ID=gene_09868
+I73-1_tig03_Horiz	AUGUSTUS	exon	38055	38630	0.61	+	.	Name=SM - 16;ID=gene_09869.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	38055	38630	0.61	+	.	Name=SM - 16;ID=gene_09869.t1;Parent=gene_09869
+I73-1_tig03_Horiz	AUGUSTUS	CDS	38055	38630	0.61	+	0	Name=SM - 16;ID=gene_09869.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	38055	38630	0.61	+	.	Name=SM - 16;ID=gene_09869
+I73-1_tig03_Horiz	funannotate	exon	39537	39644	.	+	.	ID=FUN_010523-T1.exon1;Parent=FUN_010523-T1
+I73-1_tig03_Horiz	funannotate	mRNA	39537	39808	.	+	.	ID=FUN_010523-T1;Parent=FUN_010523
+I73-1_tig03_Horiz	funannotate	CDS	39537	39644	.	+	0	ID=FUN_010523-T1.cds;Parent=FUN_010523-T1
+I73-1_tig03_Horiz	funannotate	CDS	39693	39808	.	+	0	ID=FUN_010523-T1.cds;Parent=FUN_010523-T1
+I73-1_tig03_Horiz	funannotate	gene	39537	39808	.	+	.	ID=FUN_010523
+I73-1_tig03_Horiz	funannotate	exon	39693	39808	.	+	.	ID=FUN_010523-T1.exon2;Parent=FUN_010523-T1
+I73-1_tig03_Horiz	AUGUSTUS	exon	40889	41008	.	+	.	Name=SM - 17;ID=gene_09870.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	41083	41652	.	+	.	Name=SM - 17;ID=gene_09870.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	41710	42180	.	+	.	Name=SM - 17;ID=gene_09870.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	42234	42341	.	+	.	Name=SM - 17;ID=gene_09870.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	40889	42341	0.55	+	.	Name=SM - 17;ID=gene_09870.t1;Parent=gene_09870
+I73-1_tig03_Horiz	AUGUSTUS	CDS	40889	41008	0.58	+	0	Name=SM - 17;ID=gene_09870.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	41083	41652	0.58	+	0	Name=SM - 17;ID=gene_09870.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	41710	42180	0.58	+	0	Name=SM - 17;ID=gene_09870.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	42234	42341	0.58	+	0	Name=SM - 17;ID=gene_09870.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	40889	42341	0.55	+	.	Name=SM - 17;ID=gene_09870
+I73-1_tig03_Horiz	maker	exon	45612	46088	.	+	.	Name=SM - 18;ID=gene_09871.t1.e1
+I73-1_tig03_Horiz	maker	exon	46138	46284	.	+	.	Name=SM - 18;ID=gene_09871.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	45612	46284	.	+	.	Name=SM - 18;ID=gene_09871.t1;Parent=gene_09871
+I73-1_tig03_Horiz	maker	CDS	45612	46088	.	+	0	Name=SM - 18;ID=gene_09871.t1.c1
+I73-1_tig03_Horiz	maker	CDS	46138	46284	.	+	0	Name=SM - 18;ID=gene_09871.t1.c1
+I73-1_tig03_Horiz	maker	gene	45612	46284	.	+	.	Name=SM - 18;ID=gene_09871
+I73-1_tig03_Horiz	maker	exon	46882	47253	.	+	.	Name=SM - 19;ID=gene_09872.t1.e1
+I73-1_tig03_Horiz	maker	exon	47867	48224	.	+	.	Name=SM - 19;ID=gene_09872.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	46882	48224	.	+	.	Name=SM - 19;ID=gene_09872.t1;Parent=gene_09872
+I73-1_tig03_Horiz	maker	gene	46882	48224	.	+	.	Name=SM - 19;ID=gene_09872
+I73-1_tig03_Horiz	maker	CDS	46898	47253	.	+	0	Name=SM - 19;ID=gene_09872.t1.c1
+I73-1_tig03_Horiz	maker	CDS	47867	48224	.	+	0	Name=SM - 19;ID=gene_09872.t1.c1
+I73-1_tig03_Horiz	Geneious	source	48468	49205	.	+	.	Name=ROU - 15
+I73-1_tig03_Horiz	maker	exon	48468	49205	.	+	.	Name=SM - 20 / ROU - 15;ID=gene_09873.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	48468	49205	.	+	.	Name=SM - 20 / ROU - 15;ID=gene_09873.t1;Parent=gene_09873
+I73-1_tig03_Horiz	maker	CDS	48468	49205	.	+	0	Name=SM - 20 / ROU - 15;ID=gene_09873.t1.c1
+I73-1_tig03_Horiz	maker	gene	48468	49205	.	+	.	Name=ROU - 15;ID=gene_09873
+I73-1_tig03_Horiz	EVM	source	50849	51008	.	-	0	Name=ROU - 16;ID=CDS5499
+I73-1_tig03_Horiz	EVM	source	50645	50801	.	-	0	Name=ROU - 16;ID=CDS5499
+I73-1_tig03_Horiz	EVM	source	50112	50596	.	-	0	Name=ROU - 16;ID=CDS5499
+I73-1_tig03_Horiz	EVM	source	49841	50064	.	-	0	Name=ROU - 16;ID=CDS549;
+I73-1_tig03_Horiz	Geneious	gene	49841	51008	.	-	.	Name=ROU - 16
+I73-1_tig03_Horiz	AUGUSTUS	exon	51134	52807	.	-	.	Name=SM - 21;ID=gene_09874.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	51134	52807	0.99	-	.	Name=SM - 21;ID=gene_09874.t1;Parent=gene_09874
+I73-1_tig03_Horiz	AUGUSTUS	CDS	51134	52807	0.99	-	0	Name=SM - 21;ID=gene_09874.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	51134	52807	0.99	-	.	Name=SM - 21;ID=gene_09874
+I73-1_tig03_Horiz	Geneious	gene	53696	55139	.	+	.	Name=ROU - 18
+I73-1_tig03_Horiz	maker	exon	54089	54199	.	+	.	Name=SM - 22/ROU - 18;ID=gene_09875.t1.e1
+I73-1_tig03_Horiz	maker	exon	54527	54577	.	+	.	Name=SM - 22/ROU - 18;ID=gene_09875.t1.e1
+I73-1_tig03_Horiz	maker	exon	54627	55115	.	+	.	Name=SM - 22/ROU - 18;ID=gene_09875.t1.e1
+I73-1_tig03_Horiz	maker	exon	55168	55336	.	+	.	Name=SM - 22/ROU - 18;ID=gene_09875.t1.e1
+I73-1_tig03_Horiz	maker	exon	55382	55557	.	+	.	Name=SM - 22/ROU - 18;ID=gene_09875.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	54089	55557	.	+	.	Name=SM - 22/ROU - 18;ID=gene_09875.t1;Parent=gene_09875
+I73-1_tig03_Horiz	maker	CDS	54089	54199	.	+	0	Name=SM - 22/ROU - 18;ID=gene_09875.t1.c1
+I73-1_tig03_Horiz	maker	CDS	54527	54577	.	+	0	Name=SM - 22/ROU - 18;ID=gene_09875.t1.c1
+I73-1_tig03_Horiz	maker	CDS	54627	55115	.	+	0	Name=SM - 22/ROU - 18;ID=gene_09875.t1.c1
+I73-1_tig03_Horiz	maker	CDS	55168	55336	.	+	0	Name=SM - 22/ROU - 18;ID=gene_09875.t1.c1
+I73-1_tig03_Horiz	maker	CDS	55382	55557	.	+	0	Name=SM - 22/ROU - 18;ID=gene_09875.t1.c1
+I73-1_tig03_Horiz	maker	gene	54089	55557	.	+	.	Name=SM - 22/ROU - 18;ID=gene_09875
+I73-1_tig03_Horiz	Geneious	source	54198	55139	.	+	.	Name=ROU - 18b
+I73-1_tig03_Horiz	AUGUSTUS	exon	55571	56035	.	-	.	Name=SM - 23;ID=gene_09876.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	55571	56035	0.72	-	.	Name=SM - 23;ID=gene_09876.t1;Parent=gene_09876
+I73-1_tig03_Horiz	AUGUSTUS	CDS	55571	56035	0.72	-	0	Name=SM - 23;ID=gene_09876.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	55571	56035	0.72	-	.	Name=SM - 23;ID=gene_09876
+I73-1_tig03_Horiz	maker	exon	56174	56674	.	+	.	Name=SM - 24;ID=gene_09877.t1.e1
+I73-1_tig03_Horiz	maker	exon	56721	56823	.	+	.	Name=SM - 24;ID=gene_09877.t1.e1
+I73-1_tig03_Horiz	maker	exon	56870	57045	.	+	.	Name=SM - 24;ID=gene_09877.t1.e1
+I73-1_tig03_Horiz	maker	exon	57092	57214	.	+	.	Name=SM - 24;ID=gene_09877.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	56174	57214	.	+	.	Name=SM - 24;ID=gene_09877.t1;Parent=gene_09877
+I73-1_tig03_Horiz	maker	CDS	56174	56674	.	+	0	Name=SM - 24;ID=gene_09877.t1.c1
+I73-1_tig03_Horiz	maker	CDS	56721	56823	.	+	0	Name=SM - 24;ID=gene_09877.t1.c1
+I73-1_tig03_Horiz	maker	CDS	56870	57045	.	+	0	Name=SM - 24;ID=gene_09877.t1.c1
+I73-1_tig03_Horiz	maker	CDS	57092	57214	.	+	0	Name=SM - 24;ID=gene_09877.t1.c1
+I73-1_tig03_Horiz	maker	gene	56174	57214	.	+	.	Name=SM - 24;ID=gene_09877
+I73-1_tig03_Horiz	Geneious	source	57278	57883	.	-	.	Name=ROU - 19
+I73-1_tig03_Horiz	maker	exon	58039	58083	.	-	.	Name=SM - 25/ROU - 19;ID=gene_09878.t1.e1
+I73-1_tig03_Horiz	maker	exon	57278	57988	.	-	.	Name=SM - 25/ROU - 19;ID=gene_09878.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	57278	58083	.	-	.	Name=SM - 25/ROU - 19;ID=gene_09878.t1;Parent=gene_09878
+I73-1_tig03_Horiz	maker	CDS	58039	58083	.	-	0	Name=SM - 25/ROU - 19;ID=gene_09878.t1.c1
+I73-1_tig03_Horiz	maker	CDS	57278	57988	.	-	0	Name=SM - 25/ROU - 19;ID=gene_09878.t1.c1
+I73-1_tig03_Horiz	maker	gene	57278	58083	.	-	.	Name=SM - 25/ROU - 19;ID=gene_09878
+I73-1_tig03_Horiz	Geneious	gene	57278	57883	.	-	.	Name=ROU - 19
+I73-1_tig03_Horiz	AUGUSTUS	exon	58830	59303	0.78	+	.	Name=SM - 26;ID=gene_09879.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	58830	59303	0.78	+	.	Name=SM - 26;ID=gene_09879.t1;Parent=gene_09879
+I73-1_tig03_Horiz	AUGUSTUS	CDS	58830	59303	0.78	+	0	Name=SM - 26;ID=gene_09879.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	58830	59303	0.78	+	.	Name=SM - 26;ID=gene_09879
+I73-1_tig03_Horiz	AUGUSTUS	exon	62109	63084	0.5	-	.	Name=SM - 27;ID=gene_09880.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	61103	61447	0.5	-	.	Name=SM - 27;ID=gene_09880.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	60998	61052	0.5	-	.	Name=SM - 27;ID=gene_09880.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	60083	60951	0.5	-	.	Name=SM - 27;ID=gene_09880.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	59588	59790	0.5	-	.	Name=SM - 27;ID=gene_09880.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	59588	63084	0.01	-	.	Name=SM - 27;ID=gene_09880.t1;Parent=gene_09880
+I73-1_tig03_Horiz	AUGUSTUS	CDS	62109	63084	0.5	-	0	Name=SM - 27;ID=gene_09880.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	61103	61447	0.5	-	0	Name=SM - 27;ID=gene_09880.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	60998	61052	0.5	-	0	Name=SM - 27;ID=gene_09880.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	60083	60951	0.5	-	0	Name=SM - 27;ID=gene_09880.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	59588	59790	0.5	-	0	Name=SM - 27;ID=gene_09880.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	59588	63084	0.01	-	.	Name=SM - 27;ID=gene_09880
+I73-1_tig03_Horiz	Geneious	DUF3723	63999	65360	.	+	.	
+I73-1_tig03_Horiz	maker	exon	63999	65360	.	+	.	Name=SM - 28;ID=gene_09881.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	63999	65360	.	+	.	Name=SM - 28;ID=gene_09881.t1;Parent=gene_09881
+I73-1_tig03_Horiz	maker	CDS	63999	65360	.	+	0	Name=SM - 28;ID=gene_09881.t1.c1
+I73-1_tig03_Horiz	maker	gene	63999	65360	.	+	.	Name=SM - 28;ID=gene_09881
+I73-1_tig03_Horiz	maker	exon	68127	68634	.	-	.	Name=SM - 29;ID=gene_09882.t1.e1
+I73-1_tig03_Horiz	maker	exon	67563	68077	.	-	.	Name=SM - 29;ID=gene_09882.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	67563	68634	.	-	.	Name=SM - 29;ID=gene_09882.t1;Parent=gene_09882
+I73-1_tig03_Horiz	maker	CDS	68127	68634	.	-	0	Name=SM - 29;ID=gene_09882.t1.c1
+I73-1_tig03_Horiz	maker	CDS	67563	68077	.	-	0	Name=SM - 29;ID=gene_09882.t1.c1
+I73-1_tig03_Horiz	maker	gene	67563	68634	.	-	.	Name=SM - 29;ID=gene_09882
+I73-1_tig03_Horiz	Geneious	source	70115	71576	.	-	.	Name=ROU - 21
+I73-1_tig03_Horiz	Geneious	source	69570	70113	.	-	.	Name=ROU - 21
+I73-1_tig03_Horiz	Geneious	gene	69570	71576	.	-	.	Name=ROU - 21
+I73-1_tig03_Horiz	maker	exon	71771	71925	.	-	.	Name=SM - 30/ROU - 21;ID=gene_09883.t1.e1
+I73-1_tig03_Horiz	maker	exon	70159	71726	.	-	.	Name=SM - 30/ROU - 21;ID=gene_09883.t1.e1
+I73-1_tig03_Horiz	maker	exon	69571	70112	.	-	.	Name=SM - 30/ROU - 21;ID=gene_09883.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	69571	71925	.	-	.	Name=SM - 30/ROU - 21;ID=gene_09883.t1;Parent=gene_09883
+I73-1_tig03_Horiz	maker	CDS	71771	71925	.	-	0	Name=SM - 30/ROU - 21;ID=gene_09883.t1.c1
+I73-1_tig03_Horiz	maker	CDS	70159	71726	.	-	0	Name=SM - 30/ROU - 21;ID=gene_09883.t1.c1
+I73-1_tig03_Horiz	maker	CDS	69571	70112	.	-	0	Name=SM - 30/ROU - 21;ID=gene_09883.t1.c1
+I73-1_tig03_Horiz	maker	gene	69571	71925	.	-	.	Name=SM - 30/ROU - 21;ID=gene_09883
+I73-1_tig03_Horiz	maker	mRNA	72548	77476	.	+	.	Name=SM - 31;ID=gene_09884.t1;Parent=gene_09884
+I73-1_tig03_Horiz	maker	gene	72548	77476	.	+	.	Name=SM - 31;ID=gene_09884
+I73-1_tig03_Horiz	funannotate	exon	72618	72662	.	+	.	ID=FUN_010527-T1.exon1
+I73-1_tig03_Horiz	funannotate	exon	73937	74032	.	+	.	ID=FUN_010527-T1.exon3
+I73-1_tig03_Horiz	maker	exon	78005	79249	.	-	.	Name=SM - 32;ID=gene_09885.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	78005	79249	.	-	.	Name=SM - 32;ID=gene_09885.t1;Parent=gene_09885
+I73-1_tig03_Horiz	maker	CDS	78005	79249	.	-	0	Name=SM - 32;ID=gene_09885.t1.c1
+I73-1_tig03_Horiz	maker	gene	78005	79249	.	-	.	Name=SM - 32;ID=gene_09885
+I73-1_tig03_Horiz	Geneious	ToxhAT	80871	100148	.	+	.	
+I73-1_tig03_Horiz	Geneious	IR	80871	81044	.	+	.	Name=TIR-1.1
+I73-1_tig03_Horiz	Geneious	CDS	81518	81772	.	+	.	Name=EVM7_08.708
+I73-1_tig03_Horiz	Geneious	CDS	81879	82046	.	-	.	Name=EVM7_08.708
+I73-1_tig03_Horiz	funannotate	mRNA	82279	82665	.	+	.	ID=FUN_010535-T1;Parent=FUN_010535
+I73-1_tig03_Horiz	Geneious	CDS	82279	82632	.	+	.	Name=HaT_Transposase
+I73-1_tig03_Horiz	Geneious	CDS	82693	83775	.	+	.	Name=HaT_Transposase
+I73-1_tig03_Horiz	Geneious	CDS	83854	84242	.	+	.	Name=HaT_Transposase
+I73-1_tig03_Horiz	Geneious	CDS	84587	84706	.	+	.	Name=HaT_Transposase
+I73-1_tig03_Horiz	Geneious	CDS	82279	82632	.	+	.	Name=HaT_Transposase
+I73-1_tig03_Horiz	Geneious	CDS	82693	83775	.	+	.	Name=HaT_Transposase
+I73-1_tig03_Horiz	Geneious	CDS	83854	84242	.	+	.	Name=HaT_Transposase
+I73-1_tig03_Horiz	Geneious	CDS	84589	84706	.	+	.	Name=HaT_Transposase
+I73-1_tig03_Horiz	funannotate	CDS	82279	82665	.	+	0	ID=FUN_010535-T1.cds
+I73-1_tig03_Horiz	funannotate	gene	82279	82665	.	+	.	ID=FUN_010535
+I73-1_tig03_Horiz	Geneious	HP	82604	82718	.	+	.	Name=HP-3
+I73-1_tig03_Horiz	Geneious	HP	84239	84491	.	+	.	Name=HP-2
+I73-1_tig03_Horiz	ENA	CDS	85101	85504	.	-	0	Name=ToxA;ID=CDS:EDU47796
+I73-1_tig03_Horiz	ENA	CDS	84918	85050	.	-	0	Name=ToxA;ID=CDS:EDU4779;
+I73-1_tig03_Horiz	Geneious	IR	86390	86490	.	+	.	Name=IR-1
+I73-1_tig03_Horiz	maker	exon	87784	88053	.	+	.	Name=MFS;ID=gene_09887.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	87784	88053	.	+	.	Name=MFS;ID=gene_09887.t1;Parent=gene_09887
+I73-1_tig03_Horiz	maker	CDS	87784	88053	.	+	0	Name=MFS;ID=gene_09887.t1.c1
+I73-1_tig03_Horiz	maker	gene	87784	88053	.	+	.	Name=MFS;ID=gene_09887
+I73-1_tig03_Horiz	Geneious	IR	88915	89015	.	-	.	Name=IR-1
+I73-1_tig03_Horiz	Geneious	CDS	89224	89292	.	+	0	Name=EVM7_08.714
+I73-1_tig03_Horiz	Geneious	CDS	89385	89573	.	+	0	Name=EVM7_08.714
+I73-1_tig03_Horiz	funannotate	exon	89648	89808	.	+	.	ID=FUN_010537-T1.exon1;Parent=FUN_010537-T1
+I73-1_tig03_Horiz	funannotate	mRNA	89648	90679	.	+	.	ID=FUN_010537-T1;Parent=FUN_010537
+I73-1_tig03_Horiz	funannotate	CDS	89648	89808	.	+	0	ID=FUN_010537-T1.cds;Parent=FUN_010537-T1
+I73-1_tig03_Horiz	funannotate	CDS	89864	90100	.	+	0	ID=FUN_010537-T1.cds;Parent=FUN_010537-T1
+I73-1_tig03_Horiz	funannotate	CDS	90148	90679	.	+	0	ID=FUN_010537-T1.cds;Parent=FUN_010537-T1
+I73-1_tig03_Horiz	funannotate	gene	89648	90679	.	+	.	ID=FUN_010537
+I73-1_tig03_Horiz	maker	exon	89660	89808	.	+	.	Name=SM - 33;ID=gene_09888.t1.e1
+I73-1_tig03_Horiz	maker	exon	90148	90238	.	+	.	Name=SM - 33;ID=gene_09888.t1.e1
+I73-1_tig03_Horiz	maker	exon	90308	90352	.	+	.	Name=SM - 33;ID=gene_09888.t1.e1
+I73-1_tig03_Horiz	maker	exon	90389	90485	.	+	.	Name=SM - 33;ID=gene_09888.t1.e1
+I73-1_tig03_Horiz	maker	exon	90600	90663	.	+	.	Name=SM - 33;ID=gene_09888.t1.e1
+I73-1_tig03_Horiz	maker	exon	91190	91226	.	+	.	Name=SM - 33;ID=gene_09888.t1.e1
+I73-1_tig03_Horiz	maker	exon	91288	91331	.	+	.	Name=SM - 33;ID=gene_09888.t1.e1
+I73-1_tig03_Horiz	maker	exon	91865	91958	.	+	.	Name=SM - 33;ID=gene_09888.t1.e1
+I73-1_tig03_Horiz	maker	exon	92148	92232	.	+	.	Name=SM - 33;ID=gene_09888.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	89660	92457	.	+	.	Name=SM - 33;ID=gene_09888.t1;Parent=gene_09888
+I73-1_tig03_Horiz	maker	CDS	89660	89808	.	+	0	Name=SM - 33;ID=gene_09888.t1.c1
+I73-1_tig03_Horiz	maker	CDS	90148	90238	.	+	0	Name=SM - 33;ID=gene_09888.t1.c1
+I73-1_tig03_Horiz	maker	CDS	90308	90352	.	+	0	Name=SM - 33;ID=gene_09888.t1.c1
+I73-1_tig03_Horiz	maker	CDS	90389	90485	.	+	0	Name=SM - 33;ID=gene_09888.t1.c1
+I73-1_tig03_Horiz	maker	CDS	90600	90663	.	+	0	Name=SM - 33;ID=gene_09888.t1.c1
+I73-1_tig03_Horiz	maker	CDS	91190	91226	.	+	0	Name=SM - 33;ID=gene_09888.t1.c1
+I73-1_tig03_Horiz	maker	CDS	91288	91331	.	+	0	Name=SM - 33;ID=gene_09888.t1.c1
+I73-1_tig03_Horiz	maker	CDS	91865	91958	.	+	0	Name=SM - 33;ID=gene_09888.t1.c1
+I73-1_tig03_Horiz	maker	CDS	92148	92232	.	+	0	Name=SM - 33;ID=gene_09888.t1.c1
+I73-1_tig03_Horiz	maker	gene	89660	92457	.	+	.	Name=SM - 33;ID=gene_09888
+I73-1_tig03_Horiz	funannotate	exon	89864	90100	.	+	.	ID=FUN_010537-T1.exon2;Parent=FUN_010537-T1
+I73-1_tig03_Horiz	funannotate	exon	90148	90679	.	+	.	ID=FUN_010537-T1.exon3;Parent=FUN_010537-T1
+I73-1_tig03_Horiz	funannotate	exon	90944	91409	.	+	.	ID=FUN_010538-T1.exon1
+I73-1_tig03_Horiz	maker	exon	92372	92457	.	+	.	Name=SM - 33;ID=gene_09888.t1.e10
+I73-1_tig03_Horiz	Geneious	gene	92846	93187	.	+	.	Name=Tc5 Transposase
+I73-1_tig03_Horiz	Geneious	gene	93194	94468	.	+	.	Name=Tc5 Transposase
+I73-1_tig03_Horiz	Geneious	ClassII	92869	100152	.	+	.	
+I73-1_tig03_Horiz	Geneious	IR	99972	100148	.	-	.	Name=TIR-1.2
+I73-1_tig03_Horiz	maker	exon	102704	103069	.	+	.	Name=SM - 34;ID=gene_09889.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	102704	103069	.	+	.	Name=SM - 34;ID=gene_09889.t1;Parent=gene_09889
+I73-1_tig03_Horiz	maker	CDS	102704	103069	.	+	0	Name=SM - 34;ID=gene_09889.t1.c1
+I73-1_tig03_Horiz	maker	gene	102704	103069	.	+	.	Name=SM - 34;ID=gene_09889
+I73-1_tig03_Horiz	AUGUSTUS	exon	103297	104346	0.59	+	.	Name=SM - 35;ID=gene_09890.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	103297	104346	0.59	+	.	Name=SM - 35;ID=gene_09890.t1;Parent=gene_09890
+I73-1_tig03_Horiz	AUGUSTUS	CDS	103297	104346	0.59	+	0	Name=SM - 35;ID=gene_09890.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	103297	104346	0.59	+	.	Name=SM - 35;ID=gene_09890
+I73-1_tig03_Horiz	maker	exon	105987	107012	.	+	.	Name=SM - 36;ID=gene_09891.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	105987	107012	.	+	.	Name=SM - 36;ID=gene_09891.t1;Parent=gene_09891
+I73-1_tig03_Horiz	maker	CDS	105987	107012	.	+	0	Name=SM - 36;ID=gene_09891.t1.c1
+I73-1_tig03_Horiz	maker	gene	105987	107012	.	+	.	Name=SM - 36;ID=gene_09891
+I73-1_tig03_Horiz	AUGUSTUS	exon	107736	107798	.	-	.	Name=SM - 37;ID=gene_09892.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	107589	107680	.	-	.	Name=SM - 37;ID=gene_09892.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	107103	107538	.	-	.	Name=SM - 37;ID=gene_09892.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	107103	107798	0.63	-	.	Name=SM - 37;ID=gene_09892.t1;Parent=gene_09892
+I73-1_tig03_Horiz	AUGUSTUS	CDS	107736	107798	0.63	-	0	Name=SM - 37;ID=gene_09892.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	107589	107680	0.63	-	0	Name=SM - 37;ID=gene_09892.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	107103	107538	0.63	-	0	Name=SM - 37;ID=gene_09892.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	107103	107798	0.63	-	.	Name=SM - 37;ID=gene_09892
+I73-1_tig03_Horiz	funannotate	exon	111666	111972	.	+	.	ID=FUN_010530-T1.exon1;Parent=FUN_010530-T1
+I73-1_tig03_Horiz	funannotate	mRNA	111666	111972	.	+	.	ID=FUN_010530-T1;Parent=FUN_010530
+I73-1_tig03_Horiz	funannotate	CDS	111666	111972	.	+	0	ID=FUN_010530-T1.cds;Parent=FUN_010530-T1
+I73-1_tig03_Horiz	funannotate	gene	111666	111972	.	+	.	ID=FUN_010530
+I73-1_tig03_Horiz	maker	mRNA	116650	119759	.	+	.	Name=SM - 38;ID=gene_09893.t1;Parent=gene_09893
+I73-1_tig03_Horiz	maker	gene	116650	119759	.	+	.	Name=SM - 38;ID=gene_09893
+I73-1_tig03_Horiz	Geneious	HET	117734	117872	.	+	.	ID=SM - 38 
+I73-1_tig03_Horiz	Geneious	HET	117939	118725	.	+	.	ID=SM - 38 
+I73-1_tig03_Horiz	Geneious	HET	118784	119498	.	+	.	ID=SM - 38 
+I73-1_tig03_Horiz	maker	CDS	117734	117872	.	+	.	Name=SM - 38;ID=gene_09893.t1.c1
+I73-1_tig03_Horiz	maker	CDS	117939	118725	.	+	.	Name=SM - 38;ID=gene_09893.t1.c1
+I73-1_tig03_Horiz	maker	CDS	118784	119498	.	+	.	Name=SM - 38;ID=gene_09893.t1.c1
+I73-1_tig03_Horiz	maker	exon	118784	119759	.	+	.	Name=SM - 38;ID=gene_09893.t1.e10
+I73-1_tig03_Horiz	AUGUSTUS	exon	122535	125339	.	-	.	Name=SM - 39;ID=gene_09894.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	122535	125339	0.45	-	.	Name=SM - 39;ID=gene_09894.t1;Parent=gene_09894
+I73-1_tig03_Horiz	AUGUSTUS	CDS	122535	125339	0.45	-	0	Name=SM - 39;ID=gene_09894.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	122535	125339	0.45	-	.	Name=SM - 39;ID=gene_09894
+I73-1_tig03_Horiz	AUGUSTUS	DUF3723	126444	126603	0.8	+	.	ID=gene_09895.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	DUF3723	126652	126941	0.8	+	.	ID=gene_09895.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	DUF3723	126988	127965	0.8	+	.	ID=gene_09895.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	DUF3723	128013	129182	0.8	+	.	ID=gene_09895.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	126444	129182	0.33	+	.	Name=SM - 40;ID=gene_09895.t1;Parent=gene_09895
+I73-1_tig03_Horiz	AUGUSTUS	CDS	126444	126603	0.93	+	0	Name=SM - 40;ID=gene_09895.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	126652	126941	0.93	+	0	Name=SM - 40;ID=gene_09895.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	126988	127965	0.93	+	0	Name=SM - 40;ID=gene_09895.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	128013	129182	0.93	+	0	Name=SM - 40;ID=gene_09895.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	126444	129182	0.33	+	.	Name=SM - 40;ID=gene_09895
+I73-1_tig03_Horiz	maker	exon	130492	130995	.	-	.	Name=SM - 41;ID=gene_09896.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	130492	130995	.	-	.	Name=SM - 41;ID=gene_09896.t1;Parent=gene_09896
+I73-1_tig03_Horiz	maker	CDS	130492	130995	.	-	0	Name=SM - 41;ID=gene_09896.t1.c1
+I73-1_tig03_Horiz	maker	gene	130492	130995	.	-	.	Name=SM - 41;ID=gene_09896
+I73-1_tig03_Horiz	maker	exon	132763	132879	.	+	.	Name=SM - 42;ID=gene_09897.t1.e1
+I73-1_tig03_Horiz	maker	exon	132932	133189	.	+	.	Name=SM - 42;ID=gene_09897.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	132763	133189	.	+	.	Name=SM - 42;ID=gene_09897.t1;Parent=gene_09897
+I73-1_tig03_Horiz	maker	CDS	132763	132879	.	+	0	Name=SM - 42;ID=gene_09897.t1.c1
+I73-1_tig03_Horiz	maker	CDS	132932	133189	.	+	0	Name=SM - 42;ID=gene_09897.t1.c1
+I73-1_tig03_Horiz	maker	gene	132763	133189	.	+	.	Name=SM - 42;ID=gene_09897
+I73-1_tig03_Horiz	AUGUSTUS	exon	134453	134947	.	-	.	Name=SM - 43;ID=gene_09898.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	134453	134947	0.66	-	.	Name=SM - 43;ID=gene_09898.t1;Parent=gene_09898
+I73-1_tig03_Horiz	AUGUSTUS	CDS	134453	134947	0.66	-	0	Name=SM - 43;ID=gene_09898.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	134453	134947	0.66	-	.	Name=SM - 43;ID=gene_09898
+I73-1_tig03_Horiz	AUGUSTUS	exon	136036	136392	.	-	.	Name=SM - 44;ID=gene_09899.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	exon	135191	135988	.	-	.	Name=SM - 44;ID=gene_09899.t1.e1
+I73-1_tig03_Horiz	AUGUSTUS	mRNA	135191	136392	0.65	-	.	Name=SM - 44;ID=gene_09899.t1;Parent=gene_09899
+I73-1_tig03_Horiz	AUGUSTUS	CDS	136036	136392	0.67	-	0	Name=SM - 44;ID=gene_09899.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	CDS	135191	135988	0.67	-	0	Name=SM - 44;ID=gene_09899.t1.c1
+I73-1_tig03_Horiz	AUGUSTUS	gene	135191	136392	0.65	-	.	Name=SM - 44;ID=gene_09899
+I73-1_tig03_Horiz	maker	exon	143387	144365	.	-	.	Name=SM - 45;ID=gene_09900.t1.e1
+I73-1_tig03_Horiz	maker	exon	143106	143332	.	-	.	Name=SM - 45;ID=gene_09900.t1.e1
+I73-1_tig03_Horiz	maker	exon	142773	143055	.	-	.	Name=SM - 45;ID=gene_09900.t1.e1
+I73-1_tig03_Horiz	maker	exon	142354	142728	.	-	.	Name=SM - 45;ID=gene_09900.t1.e1
+I73-1_tig03_Horiz	maker	exon	140914	141168	.	-	.	Name=SM - 45;ID=gene_09900.t1.e1
+I73-1_tig03_Horiz	maker	exon	140633	140860	.	-	.	Name=SM - 45;ID=gene_09900.t1.e1
+I73-1_tig03_Horiz	maker	exon	140369	140581	.	-	.	Name=SM - 45;ID=gene_09900.t1.e1
+I73-1_tig03_Horiz	maker	exon	140227	140319	.	-	.	Name=SM - 45;ID=gene_09900.t1.e1
+I73-1_tig03_Horiz	maker	mRNA	140227	144365	.	-	.	Name=SM - 45;ID=gene_09900.t1;Parent=gene_09900
+I73-1_tig03_Horiz	maker	CDS	143387	144361	.	-	0	Name=SM - 45;ID=gene_09900.t1.c1
+I73-1_tig03_Horiz	maker	CDS	143106	143332	.	-	0	Name=SM - 45;ID=gene_09900.t1.c1
+I73-1_tig03_Horiz	maker	CDS	142773	143055	.	-	0	Name=SM - 45;ID=gene_09900.t1.c1
+I73-1_tig03_Horiz	maker	CDS	142354	142728	.	-	0	Name=SM - 45;ID=gene_09900.t1.c1
+I73-1_tig03_Horiz	maker	CDS	140914	141168	.	-	0	Name=SM - 45;ID=gene_09900.t1.c1
+I73-1_tig03_Horiz	maker	CDS	140633	140860	.	-	0	Name=SM - 45;ID=gene_09900.t1.c1
+I73-1_tig03_Horiz	maker	CDS	140369	140581	.	-	0	Name=SM - 45;ID=gene_09900.t1.c1
+I73-1_tig03_Horiz	maker	CDS	140227	140319	.	-	0	Name=SM - 45;ID=gene_09900.t1.c1
+I73-1_tig03_Horiz	maker	gene	140227	144365	.	-	.	Name=SM - 45;ID=gene_09900
+I73-1_tig03_Horiz	Geneious	SDR	143078	143082	.	+	.	Name=SDR
