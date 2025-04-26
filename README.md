@@ -22,3 +22,5 @@
 Corresponding Author: Megan C. McDonald, m.c.mcdonald@bham.ac.uk
 
 If you use the code in this repository please cite the available pre-print:
+
+doi: https://doi.org/10.1101/2024.03.04.583430
