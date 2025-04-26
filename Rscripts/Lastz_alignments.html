@@ -1637,7 +1637,7 @@ studio</i></h3>
 cd /Users/mcdonamc/GIT/Sanctuary_manuscript/Rscripts
 
 # Path to your FASTA file
-fasta_file=&quot;ANNOTATED_SANCTUARY.fasta&quot;
+fasta_file=&quot;./fasta_files/ANNOTATED_SANCTUARY.fasta&quot;
 
 # Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
 # which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
@@ -1707,7 +1707,8 @@ enables having a separate gff for each fasta sequence</h3>
 <h3>Note this code is also filtering the GFF file to only plot the genes
 we are interested in (i.e. Starship accessory, cargo and Captain
 genes)</h3>
-<pre class="r"><code>filelist&lt;-list.files(pattern = &quot;\\.gff&quot;)
+<pre class="r"><code>setwd(&quot;/Users/mcdonamc/GIT/Sanctuary_manuscript/Rscripts/gffs&quot;)
+filelist&lt;-list.files(pattern = &quot;\\.gff&quot;)
 gfflist &lt;-lapply(filelist, function(file) {
   read.delim(file, comment.char = &quot;#&quot;, header = FALSE)})
 
@@ -1731,9 +1732,9 @@ unique(genes$feat_id)</code></pre>
 <h3>Create a seq object which is your fasta files for sequences aligned
 above</h3>
 <pre class="r"><code># Read the FASTA file into a seq object
-Sanc_seq &lt;- read_seqs(&quot;ANNOTATED_SANCTUARY.fasta&quot;)</code></pre>
+Sanc_seq &lt;- read_seqs(&quot;./fasta_files/ANNOTATED_SANCTUARY.fasta&quot;)</code></pre>
 <pre><code>## Reading &#39;fasta&#39; with `read_seq_len()`:
-## * file_id: ANNOTATED_SANCTUARY [ANNOTATED_SANCTUARY.fasta]</code></pre>
+## * file_id: ANNOTATED_SANCTUARY [./fasta_files/ANNOTATED_SANCTUARY.fasta]</code></pre>
 </div>
 <div id="generate-plot-with-lastz-links-and-genes-plotted-from-gff-files" class="section level3">
 <h3>Generate plot with LastZ links and genes plotted from GFF files</h3>
@@ -1765,7 +1766,7 @@ print(Lastz_plot1)</code></pre>
 Haplotype</p>
 <pre class="bash"><code>conda activate GenomeAlign
 
-fasta_file=&quot;THREE_SANCTUARY.fasta&quot;
+fasta_file=&quot;./fasta_files/THREE_SANCTUARY.fasta&quot;
 # Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
 # which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
 #lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=three_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
@@ -1801,9 +1802,9 @@ threelinks &lt;- lzThree %&gt;%
 
 
 # Read the FASTA file into a seq object
-Three_seq &lt;- read_seqs(&quot;THREE_SANCTUARY.fasta&quot;)</code></pre>
+Three_seq &lt;- read_seqs(&quot;./fasta_files/THREE_SANCTUARY.fasta&quot;)</code></pre>
 <pre><code>## Reading &#39;fasta&#39; with `read_seq_len()`:
-## * file_id: THREE_SANCTUARY [THREE_SANCTUARY.fasta]</code></pre>
+## * file_id: THREE_SANCTUARY [./fasta_files/THREE_SANCTUARY.fasta]</code></pre>
 <pre class="r"><code># Read in the AT-richness file into a feature object
 Three_seq_AT &lt;- read_feats(&quot;THREE_SANCTUARY_at_richness.bed&quot;,
                         col_names = c(&quot;seq_id&quot;, &quot;start&quot;, &quot;end&quot;, &quot;score&quot;))%&gt;% 
@@ -1840,7 +1841,7 @@ print(Three_plots_id)</code></pre>
 <h2>Generate alignments between Three haplotypes and additional smaller
 Sanctuaries</h2>
 <pre class="bash"><code>conda activate GenomeAlign
-fasta_file=&quot;Sanc_Big_Mini.fasta&quot;
+fasta_file=&quot;./fasta_files/Sanc_Big_Mini.fasta&quot;
 # Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
 # which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
 #lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=mini_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
@@ -1871,9 +1872,9 @@ minilinks &lt;- lzMini %&gt;%
     perc_id = identity # Including the % identity column
   ) 
 
-Mini_seqs &lt;- read_seqs(&quot;Sanc_Big_Mini.fasta&quot;)</code></pre>
+Mini_seqs &lt;- read_seqs(&quot;./fasta_files/Sanc_Big_Mini.fasta&quot;)</code></pre>
 <pre><code>## Reading &#39;fasta&#39; with `read_seq_len()`:
-## * file_id: Sanc_Big_Mini [Sanc_Big_Mini.fasta]</code></pre>
+## * file_id: Sanc_Big_Mini [./fasta_files/Sanc_Big_Mini.fasta]</code></pre>
 <pre class="r"><code>Mini_AT&lt;- read_feats(&quot;Sanc_Big_Mini_at_richness.bed&quot;,
                         col_names = c(&quot;seq_id&quot;, &quot;start&quot;, &quot;end&quot;, &quot;score&quot;))%&gt;% 
                         mutate(score =as.numeric(score), feat_id=&#39;AT_cont&#39;) </code></pre>
@@ -1901,18 +1902,13 @@ print(Mini_plots_id)</code></pre>
 Pnod</h2>
 <pre class="bash"><code>conda activate GenomeAlign
 
-fasta_file=&quot;Horizon_Pnod_Ptr.fasta&quot;
+fasta_file=&quot;./fasta_files/Horizon_Pnod_Ptr.fasta&quot;
 # Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
 # which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
 #lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=Short_Horizon_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
-</code></pre>
-<div id="calculate-at-richness-with-bedtools-and-save-for-plotting-with-gggenomes" class="section level3">
-<h3>Calculate AT-Richness with bedtools and save for plotting with
-gggenomes</h3>
-<pre class="bash"><code>conda activate GenomeAlign
-~/bin/AT_richness.sh Horizon_Pnod_Ptr.fasta
-</code></pre>
-</div>
+
+# Calculate AT-Richness with bedtools and save for plotting with gggenomes
+~/bin/AT_richness.sh ${fasta_file}</code></pre>
 <div id="read-in-alignments-genes-and-at-richness-and-generate-plots" class="section level3">
 <h3>Read in alignments, genes and AT-richness and generate plots</h3>
 <pre class="r"><code>Short_Horizon&lt;-read.delim(&quot;Short_Horizon_lastz.txt&quot;, comment.char = &quot;#&quot;, header = FALSE)
@@ -1939,9 +1935,9 @@ Short_Horizon_links &lt;- Short_Horizon %&gt;%
   ) 
 
 # read in sequences from fasta file
-Short_Horizon_seqs &lt;- read_seqs(&quot;Horizon_Pnod_Ptr.fasta&quot;)</code></pre>
+Short_Horizon_seqs &lt;- read_seqs(&quot;./fasta_files/Horizon_Pnod_Ptr.fasta&quot;)</code></pre>
 <pre><code>## Reading &#39;fasta&#39; with `read_seq_len()`:
-## * file_id: Horizon_Pnod_Ptr [Horizon_Pnod_Ptr.fasta]</code></pre>
+## * file_id: Horizon_Pnod_Ptr [./fasta_files/Horizon_Pnod_Ptr.fasta]</code></pre>
 <pre class="r"><code># read in AT-richness track from bed file
 at_richness &lt;- read_feats(&quot;Horizon_Pnod_Ptr_at_richness.bed&quot;,
                         col_names = c(&quot;seq_id&quot;, &quot;start&quot;, &quot;end&quot;, &quot;score&quot;))%&gt;% mutate(score =as.numeric(score),feat_id=&#39;AT_cont&#39;) </code></pre>
@@ -1976,17 +1972,22 @@ print(Short_Horizon_plots_id)</code></pre>
 <h2>Generate Alignment for Sanctuary vs Horizon</h2>
 <pre class="bash"><code>conda activate GenomeAlign
 
-fasta_file=&quot;Horizon_Sanc.fasta&quot;
+fasta_file=&quot;./fasta_files/Horizon_Sanc.fasta&quot;
 # Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
 # which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
-#lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=Horizon_Sanc_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
+lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=Horizon_Sanc_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
 </code></pre>
-<div id="calculate-at-richness-with-bedtools-and-save-for-plotting-with-gggenomes-1" class="section level3">
+<pre><code>## truncating alignment starting at (1085595,914014);  anchor at (1118540,946803)
+## truncation can be reduced by using --allocate:traceback to increase traceback memory
+## truncating alignment starting at (923553,1096093);  anchor at (946803,1118540)
+## truncating alignment ending at (880830,734832);  anchor at (858586,711609)
+## truncating alignment starting at (1080128,934130);  anchor at (1103344,956367)</code></pre>
+<div id="calculate-at-richness-with-bedtools-and-save-for-plotting-with-gggenomes" class="section level3">
 <h3>Calculate AT-Richness with bedtools and save for plotting with
 gggenomes</h3>
 <pre class="bash"><code>conda activate GenomeAlign
 
-~/bin/AT_richness.sh Horizon_Sanc.fasta
+~/bin/AT_richness.sh ./fasta_files/Horizon_Sanc.fasta
 </code></pre>
 </div>
 <div id="read-in-results-files-and-generate-plots-as-above" class="section level3">
@@ -2015,9 +2016,9 @@ Horizon_Sanc_links &lt;- Horizon_Sanc %&gt;%
     perc_id = identity # Including the % identity column
   ) 
 
-Horizon_Sanc_seqs &lt;- read_seqs(&quot;Horizon_Sanc.fasta&quot;)</code></pre>
+Horizon_Sanc_seqs &lt;- read_seqs(&quot;./fasta_files/Horizon_Sanc.fasta&quot;)</code></pre>
 <pre><code>## Reading &#39;fasta&#39; with `read_seq_len()`:
-## * file_id: Horizon_Sanc [Horizon_Sanc.fasta]</code></pre>
+## * file_id: Horizon_Sanc [./fasta_files/Horizon_Sanc.fasta]</code></pre>
 <pre class="r"><code>at_richness &lt;- read_feats(&quot;Horizon_Sanc_at_richness.bed&quot;,
                         col_names = c(&quot;seq_id&quot;, &quot;start&quot;, &quot;end&quot;, &quot;score&quot;))%&gt;% mutate(score =as.numeric(score),feat_id=&#39;AT_cont&#39;) </code></pre>
 <pre><code>## Reading &#39;bed&#39; with `read_bed()`:

@@ -15,7 +15,7 @@ conda activate GenomeAlign
 cd /Users/mcdonamc/GIT/Sanctuary_manuscript/Rscripts
 
 # Path to your FASTA file
-fasta_file="ANNOTATED_SANCTUARY.fasta"
+fasta_file="./fasta_files/ANNOTATED_SANCTUARY.fasta"
 
 # Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
 # which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
@@ -68,6 +68,7 @@ lzlinks <- lastz_output %>%
 ### Gather all available GFF files and read them in together. This enables having a separate gff for each fasta sequence
 ### Note this code is also filtering the GFF file to only plot the genes we are interested in (i.e. Starship accessory, cargo and Captain genes)
 ```{r}
+setwd("/Users/mcdonamc/GIT/Sanctuary_manuscript/Rscripts/gffs")
 filelist<-list.files(pattern = "\\.gff")
 gfflist <-lapply(filelist, function(file) {
   read.delim(file, comment.char = "#", header = FALSE)})
@@ -91,7 +92,7 @@ unique(genes$feat_id)
 ### Create a seq object which is your fasta files for sequences aligned above
 ```{r}
 # Read the FASTA file into a seq object
-Sanc_seq <- read_seqs("ANNOTATED_SANCTUARY.fasta")
+Sanc_seq <- read_seqs("./fasta_files/ANNOTATED_SANCTUARY.fasta")
 ```
 
 ### Generate plot with LastZ links and genes plotted from GFF files
@@ -123,7 +124,7 @@ ggsave("Lastz_align_percIDcolor.pdf", Lastz_plot2, width = 15, height = 15, unit
 ```{bash, engine.opts='-l'}
 conda activate GenomeAlign
 
-fasta_file="THREE_SANCTUARY.fasta"
+fasta_file="./fasta_files/THREE_SANCTUARY.fasta"
 # Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
 # which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
 #lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=three_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
@@ -161,7 +162,7 @@ threelinks <- lzThree %>%
 
 
 # Read the FASTA file into a seq object
-Three_seq <- read_seqs("THREE_SANCTUARY.fasta")
+Three_seq <- read_seqs("./fasta_files/THREE_SANCTUARY.fasta")
 
 # Read in the AT-richness file into a feature object
 Three_seq_AT <- read_feats("THREE_SANCTUARY_at_richness.bed",
@@ -193,7 +194,7 @@ ggsave("Three_align_id.pdf", Three_plots_id, width = 20, height = 12, units = "c
 
 ```{bash, engine.opts='-l'}
 conda activate GenomeAlign
-fasta_file="Sanc_Big_Mini.fasta"
+fasta_file="./fasta_files/Sanc_Big_Mini.fasta"
 # Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
 # which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
 #lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=mini_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
@@ -227,7 +228,7 @@ minilinks <- lzMini %>%
     perc_id = identity # Including the % identity column
   ) 
 
-Mini_seqs <- read_seqs("Sanc_Big_Mini.fasta")
+Mini_seqs <- read_seqs("./fasta_files/Sanc_Big_Mini.fasta")
 
 Mini_AT<- read_feats("Sanc_Big_Mini_at_richness.bed",
                         col_names = c("seq_id", "start", "end", "score"))%>% 
@@ -257,19 +258,13 @@ ggsave("Mini_align_id.pdf", Mini_plots_id, width = 15, height = 7.5, units = "cm
 ```{bash, engine.opts='-l'}
 conda activate GenomeAlign
 
-fasta_file="Horizon_Pnod_Ptr.fasta"
+fasta_file="./fasta_files/Horizon_Pnod_Ptr.fasta"
 # Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
 # which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
 #lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=Short_Horizon_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
 
-```
-
-
-### Calculate AT-Richness with bedtools and save for plotting with gggenomes
-```{bash, engine.opts='-l'}
-conda activate GenomeAlign
-~/bin/AT_richness.sh Horizon_Pnod_Ptr.fasta
-
+# Calculate AT-Richness with bedtools and save for plotting with gggenomes
+~/bin/AT_richness.sh ${fasta_file}
 ```
 
 
@@ -299,7 +294,7 @@ Short_Horizon_links <- Short_Horizon %>%
   ) 
 
 # read in sequences from fasta file
-Short_Horizon_seqs <- read_seqs("Horizon_Pnod_Ptr.fasta")
+Short_Horizon_seqs <- read_seqs("./fasta_files/Horizon_Pnod_Ptr.fasta")
 
 # read in AT-richness track from bed file
 at_richness <- read_feats("Horizon_Pnod_Ptr_at_richness.bed",
@@ -335,7 +330,7 @@ ggsave("Short_Horizon_align_id.pdf", Short_Horizon_plots_id, width = 18, height 
 ```{bash, engine.opts='-l'}
 conda activate GenomeAlign
 
-fasta_file="Horizon_Sanc.fasta"
+fasta_file="./fasta_files/Horizon_Sanc.fasta"
 # Run lastz and output with useful fields.Note most important setting is to report start2+ and end2+ 
 # which reports alignments on plus strand. This is REQUIRED for correct plotting of hits on the minus strand by gggenomes()
 #lastz ${fasta_file}[multiple] ${fasta_file}[multiple] --gapped --step=20 --seed=12of19 --output=Horizon_Sanc_lastz.txt --hspthresh=3000 --format=general:name1,strand1,start1,end1,length1,name2,strand2,start2+,end2+,length2,identity
@@ -347,7 +342,7 @@ fasta_file="Horizon_Sanc.fasta"
 ```{bash, engine.opts='-l'}
 conda activate GenomeAlign
 
-~/bin/AT_richness.sh Horizon_Sanc.fasta
+~/bin/AT_richness.sh ./fasta_files/Horizon_Sanc.fasta
 
 ```
 
@@ -378,7 +373,7 @@ Horizon_Sanc_links <- Horizon_Sanc %>%
     perc_id = identity # Including the % identity column
   ) 
 
-Horizon_Sanc_seqs <- read_seqs("Horizon_Sanc.fasta")
+Horizon_Sanc_seqs <- read_seqs("./fasta_files/Horizon_Sanc.fasta")
 at_richness <- read_feats("Horizon_Sanc_at_richness.bed",
                         col_names = c("seq_id", "start", "end", "score"))%>% mutate(score =as.numeric(score),feat_id='AT_cont') 
 
